@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      CIA Torture Justifications &middot; Post 9/11
+    
+  </title>
+
+  
+  <link rel="canonical" href="https://ciatorturejustifications.github.io/">
+  
+
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/poole.css">
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/syntax.css">
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ciatorturejustifications.github.io/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="https://ciatorturejustifications.github.io/public/favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ciatorturejustifications.github.io/atom.xml">
+  
+    
+            <script type="text/javascript">
+var jekyllMapping = (function () {
+    'use strict';
+    var settings;
+    var obj = {
+        plotArray: function(locations) {
+            function jekyllMapListen (m, s) {
+                if (s.link) {
+                    google.maps.event.addListener(m, 'click', function() {
+                        window.location.href = s.link;
+                    });
+                }
+            }
+            var bounds = new google.maps.LatLngBounds(), markers = [], s, l, m;
+            while (locations.length > 0) {
+                s = locations.pop();
+                l = new google.maps.LatLng(s.latitude, s.longitude);
+                m = new google.maps.Marker({
+                    position: l,
+                    map: this.map,
+                    title: s.title,
+                    icon: s.icon ? `/public/images/${s.icon}pin.png` : '/public/images/redpin.png'
+                });
+                markers.push(m);
+                bounds.extend(l);                
+                jekyllMapListen(m, s);
+            }
+            this.map.fitBounds(bounds);
+        },
+        indexMap: function () {
+            this.plotArray(settings.pages);
+        },
+        pageToMap: function () {
+            if (typeof(settings.latitude) !== 'undefined' && typeof(settings.longitude) !== 'undefined') {
+                this.options.center = new google.maps.LatLng(settings.latitude, settings.longitude);
+
+                var mainMarker = new google.maps.Marker({
+                    position: this.options.center,
+                    map: this.map,
+                    title: "Home"
+                });
+                this.map.setCenter(this.options.center);
+            }     
+
+            if (settings.locations instanceof Array) {
+                this.plotArray(settings.locations);
+            }
+
+            if (settings.kml) {
+                var mainLayer = new google.maps.KmlLayer(settings.kml);
+                mainLayer.setMap(this.map);
+            }
+            
+            if (settings.layers) {
+                var layers = [];
+                while (settings.layers.length > 0){
+                    var m = new google.maps.KmlLayer(settings.layers.pop());
+                    layers.push(m);
+                    m.setMap(this.map);
+                }
+            }
+        },
+        mappingInitialize: function () {
+            this.options = {
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: new google.maps.LatLng(0, 0)
+            };
+
+            this.map = new google.maps.Map(document.getElementById("jekyll-mapping"), this.options);
+
+            if (settings.pages) {
+                this.indexMap();
+            } else {
+                this.pageToMap();
+            }
+        },
+        loadScript: function (set) {
+            settings = set;
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "http://maps.googleapis.com/maps/api/js?key=" + settings.api_key + "&sensor=false&callback=jekyllMapping.mappingInitialize";
+            document.body.appendChild(script);
+        }
+    };
+    return obj;
+}());
+</script> 
+        
+    
+
+  <link rel="stylesheet" href="/public/css/jekyll-glossary_tooltip.css">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item active" href="https://ciatorturejustifications.github.io/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/CIA_FBI_Debates/">CIA & FBI Debates</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Legal_Justifications/">Legal Justifications</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/SSCI/">Senate Select Committee on Intelligence</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Black_Site_Locations_and_Detainee_List/">Black Site Locations & Detainee List</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Glossary/">Glossary</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Accessibility/">Accessibility</a>
+        
+      
+    
+
+    <span class="sidebar-nav-item">Current Version: v2.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2025 University of Leicester All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">CIA Torture Justifications</a>
+            <small>Post 9/11</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="ftralert ftralert-warning">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12 5.177l8.631 15.823h-17.262l8.631-15.823zm0-4.177l-12 22h24l-12-22zm-1 9h2v6h-2v-6zm1 9.75c-.689 0-1.25-.56-1.25-1.25s.561-1.25 1.25-1.25 1.25.56 1.25 1.25-.561 1.25-1.25 1.25z" /></svg>
+  </div>
+  <div>
+  <p style="margin-top: 1em;">
+    This website may contain potentially distressing material!
+    </p>
+  </div>
+</div>
+
+<p><img alt="9/11" src="/public/images/title911photo.jpg" /></p>
+
+<h1 id="from-terror-to-torture">From Terror to Torture</h1>
+
+<p>After the <a href="https://timeline.911memorial.org/timeline/10681">September 11th 2001 attacks</a>, <a href="https://en.wikipedia.org/wiki/George_W._Bush">President George W. Bush</a> declared the global War on Terror, in a <a href="https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-united-states-response-the-terrorist-attacks">speech to Congress on September 20th 2001</a>. This gave American intelligence services extra resources. In the pursuit of terror group <a href="https://en.wikipedia.org/wiki/Al-Qaeda">al-Qaeda</a> and <a href="https://en.wikipedia.org/wiki/Osama_bin_Laden">Osama bin Laden</a> the United States (<span class="jekyll-glossary">   US   <span class="jekyll-glossary-tooltip">United States<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States" target="_blank"></a></span></span>) seemingly would stop at nothing to see the destruction of terror groups and also find those responsible for 9/11.</p>
+
+<p>This research focuses on the Central Intelligence Agency’s (<span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span>) justifications in the War on Terror, looking into how they argued that traditional rapport building interrogations conducted by the Federal Bureau of Investigation (<span class="jekyll-glossary">   FBI   <span class="jekyll-glossary-tooltip">Federal Bureau of Investigation<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation" target="_blank"></a></span></span>) were failing, which led to internal debates. The <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> believed the implementation of Enhanced Interrogation Techniques (<span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span>) would help them to gain actionable intelligence in the hunt for Osama Bin Laden and the prevention of terror plots against the <span class="jekyll-glossary">   US   <span class="jekyll-glossary-tooltip">United States<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States" target="_blank"></a></span></span>. This research will also outline how the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> misled the Department of Justice (<span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span>) to gain legal justifications for the techniques they were planning to use. They did this to provide a legal basis on which they could have a credible defence if they were to be questioned in a legal forum. Furthermore, there is also a focus on the justifications found in the <a href="https://www.intelligence.senate.gov/sites/default/files/publications/CRPT-113srpt288.pdf">Senate Select Committee on Intelligence Study</a> into <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span>, this investigated how the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> used false metrics to claim <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> success and argue that <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> are in the interests of national security. Along with this it investigates <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> secrecy from government to get <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> continually approved and manipulating them into justifications. Then finally it investigates how this program was terminated under <a href="https://en.wikipedia.org/wiki/Barack_Obama">President Obama</a>, by a series of executive orders; however, he failed to completely shut down all detention sites. This research attempts to uncover all the main justifications the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> used to aid the legitimacy of their torture program and become exempt from any potential backlash they may face in the future.</p>
+
+<p>Below is a timeline displaying significant documents involved in the CIA’s Detention and Interrogation Program:</p>
+
+<script src="/public/js/jquery.js" type="text/javascript"></script>
+
+<style>
+    body {
+  background-color: #ffffff;
+
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'ESL Legend';
+  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.eot);
+  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.eot#iefix) format("embedded-opentype"),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.woff2) format("woff2"),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.woff) format("woff"),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.ttf) format("truetype"),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.svg#eicon) format("svg");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'ESL Legend';
+  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.eot);
+  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.eot#iefix) format("embedded-opentype"),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.woff2) format("woff2"),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.woff) format("woff"),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.ttf) format("truetype"),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.svg#eicon) format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'ESL Legend';
+  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.eot);
+  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.eot#iefix) format("embedded-opentype"),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.woff2) format("woff2"),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.woff) format("woff"),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.ttf) format("truetype"),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.svg#eicon) format("svg");
+  font-style: normal;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+.ag-format-container {
+  width: 1160px;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.ag-timeline-block {
+  padding: 300px 0;
+}
+.ag-timeline_title-box {
+  padding: 0 0 30px;
+
+  text-align: center;
+}
+.ag-timeline_tagline {
+  font-size: 40px;
+  color: rgb(84, 89, 95);
+}
+.ag-timeline_title {
+    color: white;
+  /* background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-fill-color: transparent;
+  color: transparent;
+
+  font-size: 80px; */
+}
+
+.ag-timeline_item {
+  margin: 0 0 50px;
+
+  position: relative;
+}
+.ag-timeline_item:nth-child(2n) {
+  text-align: right;
+}
+
+.ag-timeline {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+
+  position: relative;
+}
+.ag-timeline_line {
+  width: 5px;
+  background-color: #eeeff4;
+
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  bottom: 0;
+
+  overflow: hidden;
+
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.ag-timeline_line-progress {
+  width: 100%;
+  height: 20%;
+  background-color: #006cd0;
+}
+
+.ag-timeline-card_box {
+  padding: 0 0 20px 50%;
+}
+.ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
+  padding: 0 50% 20px 0;
+}
+.ag-timeline-card_point-box {
+  display: inline-block;
+  margin: 0 14px 0 -28px;
+}
+.ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
+  margin: 0 -28px 0 14px;
+}
+.ag-timeline-card_point {
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  /* border: 3px solid #eeeff4; */
+  background-color: #eeeff4;
+
+  text-align: center;
+  font-family: 'ESL Legend', sans-serif;
+  font-size: 20px;
+  color: #eeeff4;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.js-ag-active .ag-timeline-card_point {
+  color: #ffffff;
+  background-color: #006cd0;
+}
+.ag-timeline-card_meta-box {
+  display: inline-block;
+}
+.ag-timeline-card_meta {
+  margin: 10px 0 0;
+
+  font-family: 'ESL Legend', sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: #282828;
+}
+.ag-timeline-card_item {
+  display: inline-block;
+  width: 45%;
+  margin: -77px 0 0;
+  background-color: #282828;
+
+  opacity: 0;
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+
+  -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,.5);
+  -moz-box-shadow: 0 0 0 0 rgba(0,0,0,.5);
+  -o-box-shadow: 0 0 0 0 rgba(0,0,0,.5);
+  box-shadow: 0 0 0 0 rgba(0,0,0,.5);
+
+  -webkit-transition: -webkit-transform .5s, opacity .5s, box-shadow .3s;
+  -moz-transition: -moz-transform .5s, opacity .5s, box-shadow .3s;
+  -o-transition: -o-transform .5s, opacity .5s, box-shadow .3s;
+  transition: transform .5s, opacity .5s, box-shadow .3s;
+
+  position: relative;
+}
+
+.ag-timeline-card_item:hover {
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  transform: scale(1.03);
+  -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  -o-box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item {
+  -webkit-transform: translateX(-200%);
+  -moz-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  -o-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
+  -webkit-transform: translateX(200%);
+  -moz-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  -o-transform: translateX(200%);
+  transform: translateX(200%);
+}
+.js-ag-active.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
+.js-ag-active.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
+  opacity: 1;
+
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* Add hover for active items */
+.js-ag-active.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item:hover,
+.js-ag-active.ag-timeline_item:nth-child(2n) .ag-timeline-card_item:hover {
+  -webkit-transform: translateX(0) scale(1.03);
+  -moz-transform: translateX(0) scale(1.03);
+  -ms-transform: translateX(0) scale(1.03);
+  -o-transform: translateX(0) scale(1.03);
+  transform: translateX(0) scale(1.03);
+}
+.ag-timeline-card_arrow {
+  height: 18px;
+  width: 18px;
+  margin-top: 20px;
+  background-color: #282828;
+
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
+  margin-left: calc(-18px / 2);
+  margin-right: calc(-18px / 2);
+}
+.ag-timeline_item:nth-child(2n) .ag-timeline-card_arrow {
+  margin-left: -10px;
+
+  right: auto;
+  left: 0;
+}
+.ag-timeline-card_img {
+  width: 100%;
+}
+.ag-timeline-card_info {
+  padding: 20px 30px;
+}
+.ag-timeline-card_title {
+  /* display: none; */
+  /* margin: 10px 0 0; */
+
+  font-family: 'ESL Legend', sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: #FFF;
+}
+.ag-timeline-card_desc {
+  line-height: 1.45;
+
+  font-size: 16px;
+  color: #FFF;
+}
+
+
+@media only screen and (max-width: 979px) {
+  .ag-timeline_line {
+    left: 30px;
+  }
+
+  .ag-timeline_item:nth-child(2n) {
+    text-align: left;
+  }
+
+  .ag-timeline-card_box,
+  .ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
+    padding: 0 0 20px;
+  }
+  .ag-timeline-card_meta-box {
+    display: none;
+  }
+  .ag-timeline-card_point-box,
+  .ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
+    margin: 0 0 0 8px;
+  }
+  .ag-timeline-card_point {
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+  }
+  .ag-timeline-card_item {
+    width: auto;
+    margin: -65px 0 0 75px
+  }
+  .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
+  .ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
+    -webkit-transform: translateX(200%);
+    -moz-transform: translateX(200%);
+    -ms-transform: translateX(200%);
+    -o-transform: translateX(200%);
+    transform: translateX(200%);
+  }
+  .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
+    right: auto;
+    left: 0;
+  }
+  .ag-timeline-card_title {
+    display: block;
+  }
+  .ag-timeline-card_arrow {
+    margin-top: 12px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+
+  .ag-timeline-card_img {
+    height: auto;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .ag-timeline_title {
+    font-size: 60px;
+  }
+
+  .ag-timeline-card_info {
+    padding: 10px 15px;
+  }
+  .ag-timeline-card_desc {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .ag-format-container {
+    width: 750px;
+  }
+
+}
+
+@media (min-width: 980px) and (max-width: 1161px) {
+  .ag-format-container {
+    width: 960px;
+  }
+
+}
+
+.imagelink {
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+</style>
+
+<script>
+(function ($) {
+  $(function () {
+
+    $(window).on('scroll', function () {
+      fnOnScroll();
+    });
+
+    $(window).on('resize', function () {
+      fnOnResize();
+    });
+
+
+    var agTimeline = $('.js-timeline'),
+      agTimelineLine = $('.js-timeline_line'),
+      agTimelineLineProgress = $('.js-timeline_line-progress'),
+      agTimelinePoint = $('.js-timeline-card_point-box'),
+      agTimelineItem = $('.js-timeline_item'),
+      agOuterHeight = $(window).outerHeight(),
+      agHeight = $(window).height(),
+      f = -1,
+      agFlag = false;
+
+    function fnOnScroll() {
+      agPosY = $(window).scrollTop();
+
+      fnUpdateFrame();
+    }
+
+    function fnOnResize() {
+      agPosY = $(window).scrollTop();
+      agHeight = $(window).height();
+
+      fnUpdateFrame();
+    }
+
+    function fnUpdateWindow() {
+      agFlag = false;
+
+      agTimelineLine.css({
+        top: agTimelineItem.first().find(agTimelinePoint).offset().top - agTimelineItem.first().offset().top,
+        bottom: agTimeline.offset().top + agTimeline.outerHeight() - agTimelineItem.last().find(agTimelinePoint).offset().top
+      });
+
+      f !== agPosY && (f = agPosY, agHeight, fnUpdateProgress());
+    }
+
+    function fnUpdateProgress() {
+      var agTop = agTimelineItem.last().find(agTimelinePoint).offset().top;
+
+      i = agTop + agPosY - $(window).scrollTop();
+      a = agTimelineLineProgress.offset().top + agPosY - $(window).scrollTop();
+      n = agPosY - a + agOuterHeight / 2;
+      i <= agPosY + agOuterHeight / 2 && (n = i - a);
+      agTimelineLineProgress.css({height: n + "px"});
+
+      agTimelineItem.each(function (index) {
+        var agTop = $(this).find(agTimelinePoint).offset().top;
+
+        // Make first item active by default OR apply normal scrolling logic for all items
+        if (index === 0) {
+          $(this).addClass('js-ag-active');
+        } else {
+          (agTop + agPosY - $(window).scrollTop()) < agPosY + .5 * agOuterHeight ? $(this).addClass('js-ag-active') : $(this).removeClass('js-ag-active');
+        }
+      })
+    }
+
+    function fnUpdateFrame() {
+      agFlag || requestAnimationFrame(fnUpdateWindow);
+      agFlag = true;
+    }
+
+    // Initialize the timeline on page load
+    fnOnScroll();
+
+  });
+})(jQuery);
+
+    </script>
+
+<div class="ag-timeline-block" style="margin-top: -10em; margin-left: -10em;">
+
+<section class="ag-section">
+    <div class="ag-format-container">
+      <div class="js-timeline ag-timeline">
+        <div class="js-timeline_line ag-timeline_line">
+          <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
+        </div>
+        <div class="ag-timeline_list">
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">2002</div>
+              </div>
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">February 7</div>
+              </div>
+            </div>
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <a href="https://www.supremecourt.gov/opinions/URLs_Cited/OT2005/05-184/05-184_2.pdf" target="_blank" rel="noopener noreferrer">
+                  <img alt="test" src="/public/images/1_r.png" class="ag-timeline-card_img" width="640" height="360" border="2px" style="color: #282828;" />
+                  </a>
+                </div>
+                <div class="ag-timeline-card_info">
+                  <div class="ag-timeline-card_title"><a href="https://www.supremecourt.gov/opinions/URLs_Cited/OT2005/05-184/05-184_2.pdf">Memorandum issues by President George W. Bush</a></div>
+                  <div class="ag-timeline-card_desc">
+                    This memorandum set out that al-Qaeda and Taliban operatives were not classed as 'lawful combatants' and therefore the 'Geneva Convention Relative to the Treatment of Prisoners of War' did not apply to those capture in the War on Terror. President Bush also refers to prisoners as 'detainees' so that as an additional safeguard those captured were not classed as prisoners.
+                  </div>
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">August 1</div>
+              </div>
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">2002</div>
+              </div>
+            </div>
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                <a href="https://www.therenditionproject.org.uk/pdf/PDF%2019%20[Bybee%20Memo%20to%20Gonzales%20Standards%20Interrogation%201%20Aug.pdf" target="_blank" rel="noopener noreferrer">
+                  <img src="/public/images/2_r.png" class="ag-timeline-card_img" width="640" height="360" border="2px" style="color: #282828;" alt="Image of memo to Gonzales" />
+                </a>
+                </div>
+                <div class="ag-timeline-card_info">
+                  <div class="ag-timeline-card_title"><a href="https://www.therenditionproject.org.uk/pdf/PDF%2019%20[Bybee%20Memo%20to%20Gonzales%20Standards%20Interrogation%201%20Aug.pdf">Memorandrum for Alberto R. Gonzales Counsel to the President</a></div>
+                  <div class="ag-timeline-card_desc">
+                    This memorandum issued by Jay S. Bybee and drafted by John Yoo stated to the White House Counsel, Alberto R. Gonzales that the EIT program did not violate the domestic Definition of Torture Under 18 U.S.C. §§ 2340–2340A. Despite this being sent after EITs had deployed it aimed to narrow the definition of torture in order to make CIA actions legal. It did this by stating what severe pain or suffering as a result of torture was.
+                  </div>
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">2002</div>
+              </div>
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">August 1</div>
+              </div>
+            </div>
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <a href="https://www.therenditionproject.org.uk/pdf/PDF%2015%20[Bybee%20Memo%20to%20CIA%201%20Aug%202002].pdf"><img src="/public/images/3_r.png" class="ag-timeline-card_img" width="640" height="360" border="2px" style="color: #282828;" alt="Image of memo to Rizzo concerning interrogation" /></a>
+                </div>
+                <div class="ag-timeline-card_info">
+                  <div class="ag-timeline-card_title"><a href="https://www.therenditionproject.org.uk/pdf/PDF%2015%20[Bybee%20Memo%20to%20CIA%201%20Aug%202002].pdf">Memorandum for John Rizzo Acting Genereal Councel of the Central Intelligence Agency</a></div>
+                  <div class="ag-timeline-card_desc">
+                    The memorandum analyses the CIA's claims of Abu Zubaydah's resistance to interrogations, and assessed coercive techniques that they planned to employ, such as waterboarding, stress positions, and sleep deprevation in relation to U.S. torture statute 18 U.S.C. §§ 2340–2340A. Bybee's memo suggests that whether used separately or in combination - these techniques do not amount to torture, especially if sufficient medical or psychological precautions are taken. This memo became a significant part of the CIA's justifications for EITs.
+                  </div>
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">May 10</div>
+              </div>
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">2005</div>
+              </div>
+            </div>
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                <a href="https://www.therenditionproject.org.uk/pdf/PDF%2016%20[Bradbury%20Memo%20to%20Rizzo%20Certain%20Techniques%2010%20May%20200.pdf">
+                  <img src="/public/images/4_r.png" class="ag-timeline-card_img" width="640" height="360" alt="Image of memo regarding application of 2340-2340 A" border="2px" style="color: #282828;" /></a>
+                </div>
+                <div class="ag-timeline-card_info">
+                  <div class="ag-timeline-card_title"><a href="https://www.therenditionproject.org.uk/pdf/PDF%2016%20[Bradbury%20Memo%20to%20Rizzo%20Certain%20Techniques%2010%20May%20200.pdf">Memorandum For John A. Rizzo Senior Deputy General Counsel, Central Intelligence Agency</a></div>
+                  <div class="ag-timeline-card_desc">
+                    This memo evaluates whether 'certain' techniques (techniques used on their own) violate US torture laws. It evaluates each of the approved techniques and finds legal loopholes in the law and provides responses to any possible litigation the CIA may face in the future. It ultimately approves techniques used on their own as legal.
+                  </div>
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">2005</div>
+              </div>
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">May 10</div>
+              </div>
+            </div>
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box"><a href="https://www.therenditionproject.org.uk/pdf/PDF%2017%20[Bradbury%20Memo%20to%20Rizzo%20Combined%20Techniques%2010%20May%2020.pdf">
+                  <img src="/public/images/5_r.png" class="ag-timeline-card_img" width="640" height="360" alt="Image of memo to Rizzo regarding certain techniques" border="2px" style="color: #282828;" /></a>
+                </div>
+                <div class="ag-timeline-card_info">
+                  <div class="ag-timeline-card_title"><a href="https://www.therenditionproject.org.uk/pdf/PDF%2017%20[Bradbury%20Memo%20to%20Rizzo%20Combined%20Techniques%2010%20May%2020.pdf">Memorandum For John A. Rizzo Senior Deputy General Counsel, Central Intelligence Agency</a></div>
+                  <div class="ag-timeline-card_desc">
+                    The Department of Justice does not believe that the combination of techniques will cause intense pain or suffering and is satisfied with the precautions in place to avoid this. While recognizing the techniques are designed to wear down detainees, the memo authorizes their use, asserting they are not expected to cause "severe physical pain." However, it acknowledges the combination of sleep deprivation and waterboarding poses a higher risk of physical distress, and close monitoring is necessary, but rules that techniques used in combination with eachother are legal.
+                  </div>
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">May 30</div>
+              </div>
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">2005</div>
+              </div>
+            </div>
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box"><a href="https://www.therenditionproject.org.uk/pdf/PDF%2018%20[Bradbury%20Memo%20to%20Rizzo%2030%20May%202005].pdf">
+                  <img src="/public/images/6_r.png" class="ag-timeline-card_img" width="640" height="360" alt="Image of memo regarding application of Article 16 or CAT" border="2px" style="color: #282828;" /></a>
+                </div>
+                <div class="ag-timeline-card_info">
+                  <div class="ag-timeline-card_title"><a href="https://www.therenditionproject.org.uk/pdf/PDF%2018%20[Bradbury%20Memo%20to%20Rizzo%2030%20May%202005].pdf">Memorandum For John A. Rizzo Senior Deputy General Counsel, Central Intelligence Agency</a></div>
+                  <div class="ag-timeline-card_desc">
+                    This memorandum defines whether specific CIA "enhanced interrogation techniques" (EITs) align with US obligations under Article 16 of the UN Convention Against Torture (CAT). While there are concerns about combining techniques potentially causing mental suffering, the analysis rationalizes them by emphasizing CIA screening, limitations, and medical safeguards. The DoJ does not believe this combination of techniques will cause severe pain or suffering as safeguards are in place to avoid this. The CIA deemed the techniques as vital for national security, and the DoJ ruled that the EITs do not violate laws against torture or cruel treatment. Article 16 of the UN Convention Against Torture is deemed not applicable in this context.
+                  </div>
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">2007</div>
+              </div>
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">July 20</div>
+              </div>
+            </div>
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box"><a href="https://www.justice.gov/sites/default/files/olc/legacy/2009/08/24/memo-warcrimesact.pdf">
+                  <img src="/public/images/7_r.png" class="ag-timeline-card_img" width="640" height="360" alt="Image of memo regarding application of Geneva Convention" /></a>
+                </div>
+                <div class="ag-timeline-card_info">
+                  <div class="ag-timeline-card_title"><a href="https://www.justice.gov/sites/default/files/olc/legacy/2009/08/24/memo-warcrimesact.pdf">Memorandum For John A. Rizzo Acting General Counsel, Central Intelligence Agency</a></div>
+                  <div class="ag-timeline-card_desc">
+                    This final DoJ memo concludes that six CIA EITs — including waterboarding, stress positions, sleep deprivation, and physical coercion, comply with domestic and international law. The memo states that the President can adopt this interpretation via executive order, shielding interrogators from legal liability. The CIA is authorised to use these methods only on al Qaeda detainees deemed as critical intelligence sources. It also approving techniques, and provided medical clearance confirming no health risks. The memo ultimately stated that the techniques do not quantify war crimes.
+                  </div>
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+                    <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">December 9</div>
+              </div>
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">2014</div>
+              </div>
+            </div>
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box"><a href="https://www.intelligence.senate.gov/sites/default/files/publications/CRPT-113srpt288.pdf">
+                  <img src="/public/images/8_r.png" class="ag-timeline-card_img" width="640" height="512" alt="Image of front page of SSCI Study" border="2px" style="color: #282828;" /></a>
+                </div>
+                <div class="ag-timeline-card_info">
+                  <div class="ag-timeline-card_title"><a href="https://www.intelligence.senate.gov/sites/default/files/publications/CRPT-113srpt288.pdf">SSCI Study of the Central Intelligence Agency's Detention and Interrogation Program</a></div>
+                  <div class="ag-timeline-card_desc">
+                    This SSCI Study came out after President Obama deemed the EIT program as illegal in 2009. It stated that the CIA misled the DoJ and the government in order to get techniques approved to help justify their program. As well as misleading all those involved about the reported efficacy of EITs. The Study explicitly states that EITs did not produce actionable intelligence despite the CIA accrediting intelligence to their work. It also sets out human rights abuses of detainees especially through the use of unapproved tactics as well as EITs leading to the conclusion that there was significant; operational, legal, moral failures.
+                  </div>
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/public/js/script.js'></script>
+  </body>
+</html>

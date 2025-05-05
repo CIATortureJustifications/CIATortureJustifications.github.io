@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Legal Justifications &middot; CIA Torture Justifications
+    
+  </title>
+
+  
+  <link rel="canonical" href="https://ciatorturejustifications.github.io/Legal_Justifications/">
+  
+
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/poole.css">
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/syntax.css">
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ciatorturejustifications.github.io/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="https://ciatorturejustifications.github.io/public/favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ciatorturejustifications.github.io/atom.xml">
+  
+    
+            <script type="text/javascript">
+var jekyllMapping = (function () {
+    'use strict';
+    var settings;
+    var obj = {
+        plotArray: function(locations) {
+            function jekyllMapListen (m, s) {
+                if (s.link) {
+                    google.maps.event.addListener(m, 'click', function() {
+                        window.location.href = s.link;
+                    });
+                }
+            }
+            var bounds = new google.maps.LatLngBounds(), markers = [], s, l, m;
+            while (locations.length > 0) {
+                s = locations.pop();
+                l = new google.maps.LatLng(s.latitude, s.longitude);
+                m = new google.maps.Marker({
+                    position: l,
+                    map: this.map,
+                    title: s.title,
+                    icon: s.icon ? `/public/images/${s.icon}pin.png` : '/public/images/redpin.png'
+                });
+                markers.push(m);
+                bounds.extend(l);                
+                jekyllMapListen(m, s);
+            }
+            this.map.fitBounds(bounds);
+        },
+        indexMap: function () {
+            this.plotArray(settings.pages);
+        },
+        pageToMap: function () {
+            if (typeof(settings.latitude) !== 'undefined' && typeof(settings.longitude) !== 'undefined') {
+                this.options.center = new google.maps.LatLng(settings.latitude, settings.longitude);
+
+                var mainMarker = new google.maps.Marker({
+                    position: this.options.center,
+                    map: this.map,
+                    title: "Legal Justifications"
+                });
+                this.map.setCenter(this.options.center);
+            }     
+
+            if (settings.locations instanceof Array) {
+                this.plotArray(settings.locations);
+            }
+
+            if (settings.kml) {
+                var mainLayer = new google.maps.KmlLayer(settings.kml);
+                mainLayer.setMap(this.map);
+            }
+            
+            if (settings.layers) {
+                var layers = [];
+                while (settings.layers.length > 0){
+                    var m = new google.maps.KmlLayer(settings.layers.pop());
+                    layers.push(m);
+                    m.setMap(this.map);
+                }
+            }
+        },
+        mappingInitialize: function () {
+            this.options = {
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: new google.maps.LatLng(0, 0)
+            };
+
+            this.map = new google.maps.Map(document.getElementById("jekyll-mapping"), this.options);
+
+            if (settings.pages) {
+                this.indexMap();
+            } else {
+                this.pageToMap();
+            }
+        },
+        loadScript: function (set) {
+            settings = set;
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "http://maps.googleapis.com/maps/api/js?key=" + settings.api_key + "&sensor=false&callback=jekyllMapping.mappingInitialize";
+            document.body.appendChild(script);
+        }
+    };
+    return obj;
+}());
+</script> 
+        
+    
+
+  <link rel="stylesheet" href="/public/css/jekyll-glossary_tooltip.css">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/CIA_FBI_Debates/">CIA & FBI Debates</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item active" href="https://ciatorturejustifications.github.io/Legal_Justifications/">Legal Justifications</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/SSCI/">Senate Select Committee on Intelligence</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Black_Site_Locations_and_Detainee_List/">Black Site Locations & Detainee List</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Glossary/">Glossary</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Accessibility/">Accessibility</a>
+        
+      
+    
+
+    <span class="sidebar-nav-item">Current Version: v2.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2025 University of Leicester All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">CIA Torture Justifications</a>
+            <small>Post 9/11</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="page">
+  <h1 class="page-title">Legal Justifications</h1>
+  <p><strong>How the CIA gained legal justifications for EITs from the Department of Justice</strong></p>
+
+<p>After initially justifying <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> by claiming that traditional rapport building techniques were failing the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> then needed to gain legal backing to make their actions legal. The very fact the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> did this infers that they knew the techniques were legally questionable. Director of Central Intelligence, <a href="https://en.wikipedia.org/wiki/George_Tenet">George Tenet</a>, knew that <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> would cause legal questions to arise as they could constitute torture. Tenet called for direct legal clearence of the techniques before they were used (although Zubaydah had already been subjected to <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span>). Tenet signed off on the techniques so long as they were <em>legal</em>, additionally, Tenet lobbied President Bush in order to get further legal support for the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> and their actions. As a result Bush issued a <a href="https://www.supremecourt.gov/opinions/URLs_Cited/OT2005/05-184/05-184_2.pdf">memorandum</a> on February 7th, 2002, under direction of the <span class="jekyll-glossary">   DoD   <span class="jekyll-glossary-tooltip">Department of Defense<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Defense" target="_blank"></a></span></span> relating to the legal application of the <em><a href="https://www.un.org/en/genocideprevention/documents/atrocity-crimes/Doc.33_GC-IV-EN.pdf">Geneva Convention</a> Relative to the Treatment of Prisoners of War</em> (1949):</p>
+
+<figure><img alt="George W. Bush" src="/public/images/George-Bush-Quote.png" style="margin-left: auto; margin-right: auto; align: center;" /><figcaption><a href="https://en.wikipedia.org/wiki/George_W._Bush#/media/File:Bush_2001_inauguration.jpg">Original image</a></figcaption></figure>
+
+<p>This meant that the treatment of these prisoners were not covered by the <em>Geneva Convention</em> therefore further removing the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> from any possible legal implications arising from <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span>. Note that al-Qaeda and <a href="https://en.wikipedia.org/wiki/Taliban">Taliban</a> prisoners are also always refered to as <em>detainees</em> instead of <em>prisoners</em> in order to ensure that along with Bush’s memorandum the <em>Geneva Convention</em> would be even more difficult to apply. This was a significant step towards the giving <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> <em>legal</em> credibility.</p>
+
+<p>After developing the techniques Mitchell, along with Counterterrrorism Centre (<span class="jekyll-glossary">   CTC   <span class="jekyll-glossary-tooltip">Counterterrorism Center<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Counterterrorism_Center" target="_blank"></a></span></span>) Chief Operating Officer <a href="https://en.wikipedia.org/wiki/Jose_Rodriguez_(intelligence_officer)">Jose Rodriguez</a> met with George Tenet and Acting General Counsel for the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> <a href="https://en.wikipedia.org/wiki/John_A._Rizzo">John A. Rizzo</a> to discuss the techniques at length which is where Tenet decided that they needed full legal confirmation:</p>
+
+<figure><img alt="George Tenet" src="/public/images/John-rizzo-quote-colour-2.png" style="margin-left: auto; margin-right: auto; align: center;" /><figcaption><a href="https://en.wikipedia.org/wiki/George_Tenet#/media/File:George_Tenet_portrait_headshot.jpg">Original image</a></figcaption></figure>
+
+<p>This is what ultimately triggered the numerous communications between the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> and <span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span> which aimed to narrow legal definitions of what constituted torture in attempt to make <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> legal. Bush’s true knowledge of the program seems unclear as senior members of the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> stated that Bush was not briefed on the program, however, Bush contradicts this in his book <em><a href="https://en.wikipedia.org/wiki/Decision_Points">Decision Points</a></em> where he claimed he was informed. However, this does not detract from the fact that this program still involved very high up members of the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> and government.</p>
+
+<p>Numerous memorandums were sent between the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span>  and <span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span> , often dubbed as the ‘<a href="https://en.wikipedia.org/wiki/Torture_Memos">Torture memos</a>’ however the first was arguably the most significant. This <a href="https://www.therenditionproject.org.uk/pdf/PDF%2019%20[Bybee%20Memo%20to%20Gonzales%20Standards%20Interrogation%201%20Aug.pdf">memo</a> was sent from the <span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span> to White House Counsel <a href="https://en.wikipedia.org/wiki/Alberto_Gonzales">Alberto Gonzales</a> (pictured below).</p>
+
+<figure><img alt="Memo" src="/public/images/memo.png" style="margin-left: auto; margin-right: auto; align: center; width: 640px; height: 480px;" /><figcaption><a href="https://www.therenditionproject.org.uk/pdf/PDF%2019%20[Bybee%20Memo%20to%20Gonzales%20Standards%20Interrogation%201%20Aug.pdf">Source</a></figcaption></figure>
+
+<p>This memo titled <em>Standards of Conduct for Interrogation under <a href="https://www.justice.gov/archives/jm/criminal-resource-manual-20-torture-18-usc-2340a">18 U.S.C. §§ 2340–2340A</a></em> was sent on August 1st, 2002. This memo set out for the first time what would constitute a breach of <em>2340-2340A</em> thus narrowing the legal definition of torture. It ruled <em>2340-2340A</em> only covered extreme acts. Stating that ‘severe pain’ covered acts that were hard for a victim to endure and it must be accompanied by severe physical injury, including organ failure and/or death. It also stated that severe mental pain must cause lasting phychological harm like developing a mental disorder and the causes of this suffering are listed in the statute. It further reiterates that techniques the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> are using may constitute ‘cruel, inhuman, or degrading treatment’ but they fail to constitute torture.  It also upheld Bush’s memo stating that al-Qaeda and Taliban detainees are not covered by the <em>Geneva Convention</em>. Although there were many more memos to follow this one, it set a presedent to base other legal decisions off of and also was the first to acknoledge that <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> were within the remits of the law for the first time.</p>
+
+<p>The very same day a <a href="https://www.therenditionproject.org.uk/pdf/PDF%2015%20[Bybee%20Memo%20to%20CIA%201%20Aug%202002].pdf">memo</a> was issued from the <span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span> to Rizzo regarding the <em>Interrogation of al-Qaeda operative</em>. This was refering specifically to the interrogation of Abu Zubaydah. It set out the ten approved techniques and established safeguards for each one to further exploit loopholes in the law and protect the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> and its interrogators from litigation. It further stated that interrogations must also be overseen by medical professionals to determine whether <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> actions were causing severe physical or mental pain or suffering. As interrogations occurred other memos were issued to address other specfics such as who constituted a ‘high-value detainee’, as these detainees were technically the only individuals that could be subjected to <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span>. It is stated in one of <a href="https://en.wikipedia.org/wiki/Steven_G._Bradbury">Steven G. Bradbury</a>’s <a href="https://www.therenditionproject.org.uk/pdf/PDF%2016%20%5bBradbury%20Memo%20to%20Rizzo%20Certain%20Techniques%2010%20May%20200.pdf">memos</a> that a ‘high-value detainee’ is an
+individual that is a senior member of al-Qaeda or a group associated with al-Qaeda, has knowledge of an imminent terror attack or has had involvement in the planning of one and, if released, poses a continued threat.</p>
+
+<hr />
+
+<p><strong>Wider Reading</strong></p>
+
+<p><a href="https://scholarship.law.georgetown.edu/cgi/viewcontent.cgi?article=3232&amp;context=facpub">David Luban, Katherine S. Newell, ‘Personality Disruption as Mental Torture: The CIA, Interrogational Abuse, and the U.S. Torture Act, <em>GeorgetownLaw Journal,</em> 108, No.2 (2019), pp.334-387</a></p>
+
+<p><a href="https://www.theguardian.com/us-news/ng-interactive/2017/oct/09/cia-torture-black-site-enhanced-interrogation">Larry Siems, <em>Inside the CIA’s black site torture room,</em> 2017 [accessed May 5th 2025].</a></p>
+
+<p><a href="https://www.therenditionproject.org.uk/index.html">Rendition Research Team, <em>The Rendition Project,</em> 2019 [accessed May 5th 2025].</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=6swSOe-ZXWk">TODAY, <em>How 9/11 Changed Bush’s Presidency: Part Two / Archives / TODAY,</em> 2014 [accessed May 5th 2025].</a></p>
+
+<hr />
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/public/js/script.js'></script>
+  </body>
+</html>

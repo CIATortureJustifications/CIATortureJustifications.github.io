@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      CIA & FBI Debates &middot; CIA Torture Justifications
+    
+  </title>
+
+  
+  <link rel="canonical" href="https://ciatorturejustifications.github.io/CIA_FBI_Debates/">
+  
+
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/poole.css">
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/syntax.css">
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ciatorturejustifications.github.io/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="https://ciatorturejustifications.github.io/public/favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ciatorturejustifications.github.io/atom.xml">
+  
+    
+            <script type="text/javascript">
+var jekyllMapping = (function () {
+    'use strict';
+    var settings;
+    var obj = {
+        plotArray: function(locations) {
+            function jekyllMapListen (m, s) {
+                if (s.link) {
+                    google.maps.event.addListener(m, 'click', function() {
+                        window.location.href = s.link;
+                    });
+                }
+            }
+            var bounds = new google.maps.LatLngBounds(), markers = [], s, l, m;
+            while (locations.length > 0) {
+                s = locations.pop();
+                l = new google.maps.LatLng(s.latitude, s.longitude);
+                m = new google.maps.Marker({
+                    position: l,
+                    map: this.map,
+                    title: s.title,
+                    icon: s.icon ? `/public/images/${s.icon}pin.png` : '/public/images/redpin.png'
+                });
+                markers.push(m);
+                bounds.extend(l);                
+                jekyllMapListen(m, s);
+            }
+            this.map.fitBounds(bounds);
+        },
+        indexMap: function () {
+            this.plotArray(settings.pages);
+        },
+        pageToMap: function () {
+            if (typeof(settings.latitude) !== 'undefined' && typeof(settings.longitude) !== 'undefined') {
+                this.options.center = new google.maps.LatLng(settings.latitude, settings.longitude);
+
+                var mainMarker = new google.maps.Marker({
+                    position: this.options.center,
+                    map: this.map,
+                    title: "CIA & FBI Debates"
+                });
+                this.map.setCenter(this.options.center);
+            }     
+
+            if (settings.locations instanceof Array) {
+                this.plotArray(settings.locations);
+            }
+
+            if (settings.kml) {
+                var mainLayer = new google.maps.KmlLayer(settings.kml);
+                mainLayer.setMap(this.map);
+            }
+            
+            if (settings.layers) {
+                var layers = [];
+                while (settings.layers.length > 0){
+                    var m = new google.maps.KmlLayer(settings.layers.pop());
+                    layers.push(m);
+                    m.setMap(this.map);
+                }
+            }
+        },
+        mappingInitialize: function () {
+            this.options = {
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: new google.maps.LatLng(0, 0)
+            };
+
+            this.map = new google.maps.Map(document.getElementById("jekyll-mapping"), this.options);
+
+            if (settings.pages) {
+                this.indexMap();
+            } else {
+                this.pageToMap();
+            }
+        },
+        loadScript: function (set) {
+            settings = set;
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "http://maps.googleapis.com/maps/api/js?key=" + settings.api_key + "&sensor=false&callback=jekyllMapping.mappingInitialize";
+            document.body.appendChild(script);
+        }
+    };
+    return obj;
+}());
+</script> 
+        
+    
+
+  <link rel="stylesheet" href="/public/css/jekyll-glossary_tooltip.css">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item active" href="https://ciatorturejustifications.github.io/CIA_FBI_Debates/">CIA & FBI Debates</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Legal_Justifications/">Legal Justifications</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/SSCI/">Senate Select Committee on Intelligence</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Black_Site_Locations_and_Detainee_List/">Black Site Locations & Detainee List</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Glossary/">Glossary</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Accessibility/">Accessibility</a>
+        
+      
+    
+
+    <span class="sidebar-nav-item">Current Version: v2.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2025 University of Leicester All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">CIA Torture Justifications</a>
+            <small>Post 9/11</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="page">
+  <h1 class="page-title">CIA & FBI Debates</h1>
+  <p><strong>How internal debates were used to justify Enhanced Interrogation Techniques</strong></p>
+
+<p>After 9/11, for valid reason, there was a huge focus on preventing any future terror attacks in the <span class="jekyll-glossary">   US   <span class="jekyll-glossary-tooltip">United States<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States" target="_blank"></a></span></span>. After President George W. Bush’s declaration of the War on Terror, the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> launched their ‘Detention and Interrogation Program’. They did this in attempt to gain further understanding of the global terror network and al-Qaeda in particular. Overall, 119 detainees were admitted into the Program, with around 39 detainees being officially subjected to EITs. After significant intelligence failures prior to 9/11 by the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> in particular which is detailed in the <a href="https://www.9-11commission.gov/report/911Report.pdf">9/11 Commission Report</a>, they wanted to use these significant extra resources to prevent furture attacks and find those responsible for 9/11, including Osama bin Laden.</p>
+
+<p>One of the first detainees to enter the program was <a href="https://en.wikipedia.org/wiki/Abu_Zubaydah">Abu Zubaydah</a> (pictured below):</p>
+
+<figure><img alt="Abu Zubaydah" src="/public/images/Abu_Zubaydah.jpg" style="margin-left: auto; margin-right: auto; align: center;" /><figcaption><a href="https://en.wikipedia.org/wiki/Abu_Zubaydah#/media/File:Abu_Zubaydah.jpg">Source</a></figcaption></figure>
+
+<p>Despite intelligence available to the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> to suggest otherwise - the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> stated that Abu Zubaydah was extremely high up in the al-Qaeda hierarchy, possibly being the “third or fourth man”, although this was not the case. This was a factor detailed by Special Agent <a href="https://en.wikipedia.org/wiki/Ali_Soufan">Ali H. Soufan</a> in his book <em><a href="https://www.penguin.co.uk/books/444227/the-black-banners-declassified-by-soufan-ali/9780141997131">The Black Banners</a></em> Subsequently, the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> used this as a main justification for implementing their <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> on Zubaydah as they claimed he was being evasive during interrogations and not giving up information that someone of his <em>stature</em> would possess.</p>
+
+<p>There is evidence (all following evidence it supported in Soufan’s or <a href="https://www.penguinrandomhouse.com/books/537150/enhanced-interrogation-by-james-e-mitchell-phd-with-bill-harlow/">James E. Mitchell’s book</a>) to suggest that the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> had already decided that the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> had already decided to use <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> as a primary method of interrogation in 2001 prior to supposed traditional rapport interrogation failure. However, in 2002 when the <span class="jekyll-glossary">   US   <span class="jekyll-glossary-tooltip">United States<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States" target="_blank"></a></span></span> began to capture and question detainees official justifications came through inter-agency debates between the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> and <span class="jekyll-glossary">   FBI   <span class="jekyll-glossary-tooltip">Federal Bureau of Investigation<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation" target="_blank"></a></span></span>. The <span class="jekyll-glossary">   FBI   <span class="jekyll-glossary-tooltip">Federal Bureau of Investigation<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation" target="_blank"></a></span></span> were strongly advocating for the use of traditional rapport building interrogations, which they claim were harvesting strong, actionable intelligence. Despite the <span class="jekyll-glossary">   FBI   <span class="jekyll-glossary-tooltip">Federal Bureau of Investigation<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation" target="_blank"></a></span></span> gathering intelligence from non-coercive methods. The <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> claimed that these interrogations were not gaining any intelligence, therefore other methods needed to be employed.</p>
+
+<p>The <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> then tasked psychology contractor, <a href="https://en.wikipedia.org/wiki/James_Elmer_Mitchell">Dr. James E. Mitchell</a> with the assistance of <a href="https://en.wikipedia.org/wiki/Bruce_Jessen">Dr. Bruce Jessen</a> to develop an effective interrogation program that would yield significant results. Mitchell believed that he could reverse engineer the <span class="jekyll-glossary">   US   <span class="jekyll-glossary-tooltip">United States<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States" target="_blank"></a></span></span> military’s Survival, Evasion, Resistance, and Escape <span class="jekyll-glossary">   SERE   <span class="jekyll-glossary-tooltip">Survival, Evasion, Resistance, and Escape<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Survival,_Evasion,_Resistance_and_Escape" target="_blank"></a></span></span> training. <span class="jekyll-glossary">   SERE   <span class="jekyll-glossary-tooltip">Survival, Evasion, Resistance, and Escape<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Survival,_Evasion,_Resistance_and_Escape" target="_blank"></a></span></span> training is used to train <span class="jekyll-glossary">   US   <span class="jekyll-glossary-tooltip">United States<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States" target="_blank"></a></span></span> personnel who are at high-risk of capture to protect information in the event that they are tortured. As a result, Mitchell developed the following <a href="https://www.therenditionproject.org.uk/about/issues/torture/eits.html">techniques</a> to be used on <a href="https://www.therenditionproject.org.uk/prisoners/hvd.html">high-value detainees</a>:</p>
+
+<ol>
+  <li>Attention grasp</li>
+  <li>Walling</li>
+  <li>Facial hold</li>
+  <li>Facial (insult) slap</li>
+  <li>Cramped confinement</li>
+  <li>Wall standing</li>
+  <li>Stress positions</li>
+  <li>Sleep deprivation</li>
+  <li>Insects place in confinement box</li>
+  <li>Waterboarding</li>
+</ol>
+
+<p>The image below shows a number of detainees at <a href="https://en.wikipedia.org/wiki/Guantanamo_Bay_detention_camp">Guantanamo Bay Detention Camp</a> being forced into “Stress Positions” as a form of torture:</p>
+
+<figure><img alt="Camp X-Ray Detainees" src="/public/images/Camp_x-ray_detainees.jpg" style="margin-left: auto; margin-right: auto; align: center;" /><figcaption><a href="https://en.wikipedia.org/wiki/Guantanamo_Bay_detention_camp#/media/File:Camp_x-ray_detainees.jpg">Source</a></figcaption></figure>
+
+<p>Mitchell claimed these techniques would be extremely successful at gaining actionable intelligence from detainees. Mitchell convinced the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> that these techniques would particularly be effective against Zubaydah’s precieved deception and evasion. To get these techniques approved the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> repeatedly attempted to discredit <span class="jekyll-glossary">   FBI   <span class="jekyll-glossary-tooltip">Federal Bureau of Investigation<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation" target="_blank"></a></span></span> efforts by stating that <span class="jekyll-glossary">   FBI   <span class="jekyll-glossary-tooltip">Federal Bureau of Investigation<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation" target="_blank"></a></span></span> interrogations were repeatedly failing. Despite the <span class="jekyll-glossary">   FBI   <span class="jekyll-glossary-tooltip">Federal Bureau of Investigation<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation" target="_blank"></a></span></span> proving that they had gained significant actionable intelligence, however, the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> accredited this intelligence to their use of <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> which they had already started using prior to <span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span> approval. The <span class="jekyll-glossary">   FBI   <span class="jekyll-glossary-tooltip">Federal Bureau of Investigation<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation" target="_blank"></a></span></span> had repeatedly proved through the interrogations conducted by Special Agent Ali H. Soufan that the traditional interrogations had been extremely successful. Despite heavy push back from the <span class="jekyll-glossary">   FBI   <span class="jekyll-glossary-tooltip">Federal Bureau of Investigation<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation" target="_blank"></a></span></span> it seemed the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> had already made a decision that <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> would be used. As the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> controlled the <a href="https://en.wikipedia.org/wiki/CIA_black_sites">black sites</a> where interrogations using <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> were taking place it became increasingly clear that the <span class="jekyll-glossary">   FBI   <span class="jekyll-glossary-tooltip">Federal Bureau of Investigation<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation" target="_blank"></a></span></span> would not be able to push back enough to prevent the use of <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> being used. As the <span class="jekyll-glossary">   FBI   <span class="jekyll-glossary-tooltip">Federal Bureau of Investigation<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation" target="_blank"></a></span></span> did not want to be associated with these interrogations they left the black sites.</p>
+
+<hr />
+
+<p><strong>Wider Reading</strong></p>
+
+<p><a href="https://journals.copmadrid.org/historia/art/rhp2023a14">Antonio Álvarez-Cruz, ‘The CIA’s Enhanced Interrogation Techniques: How they began and where they were performed’, <em>Revista de Historia de la Psicologia</em>, 44, No.4 (2023), pp.13-22 [accessed May 5th 2025].</a></p>
+
+<p><a href="https://www.bbc.co.uk/news/world-us-canada-11723189">BBC News, <em>CIA tactics: What is ‘enhanced interrogation’?,</em> 2014 [accessed May 5th 2025].</a></p>
+
+<p><a href="https://www.theguardian.com/world/2014/apr/18/james-mitchell-cia-torture-interview">Jason Leopold, <em>James Mitchell: ‘I’m just a guy who got asked to do something for his country’,</em> 2014 [accessed May 5th 2025].</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=taXYgUvUVFQ">The Soufan Group, <em>Anderson Cooper Interviews Ali Soufan on EITS and Torture,</em> 2015 [accessed May 5th 2025].</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=MmNUi0itl-8">Vice News, <em>The Architect of the CIA’s Enhance Interrogation Program, James Mitchell</em>, 2014 [accessed May 5th 2025].</a></p>
+
+<hr />
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/public/js/script.js'></script>
+  </body>
+</html>

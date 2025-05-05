@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Accessibility &middot; CIA Torture Justifications
+    
+  </title>
+
+  
+  <link rel="canonical" href="https://ciatorturejustifications.github.io/Accessibility/">
+  
+
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/poole.css">
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/syntax.css">
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ciatorturejustifications.github.io/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="https://ciatorturejustifications.github.io/public/favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ciatorturejustifications.github.io/atom.xml">
+  
+    
+            <script type="text/javascript">
+var jekyllMapping = (function () {
+    'use strict';
+    var settings;
+    var obj = {
+        plotArray: function(locations) {
+            function jekyllMapListen (m, s) {
+                if (s.link) {
+                    google.maps.event.addListener(m, 'click', function() {
+                        window.location.href = s.link;
+                    });
+                }
+            }
+            var bounds = new google.maps.LatLngBounds(), markers = [], s, l, m;
+            while (locations.length > 0) {
+                s = locations.pop();
+                l = new google.maps.LatLng(s.latitude, s.longitude);
+                m = new google.maps.Marker({
+                    position: l,
+                    map: this.map,
+                    title: s.title,
+                    icon: s.icon ? `/public/images/${s.icon}pin.png` : '/public/images/redpin.png'
+                });
+                markers.push(m);
+                bounds.extend(l);                
+                jekyllMapListen(m, s);
+            }
+            this.map.fitBounds(bounds);
+        },
+        indexMap: function () {
+            this.plotArray(settings.pages);
+        },
+        pageToMap: function () {
+            if (typeof(settings.latitude) !== 'undefined' && typeof(settings.longitude) !== 'undefined') {
+                this.options.center = new google.maps.LatLng(settings.latitude, settings.longitude);
+
+                var mainMarker = new google.maps.Marker({
+                    position: this.options.center,
+                    map: this.map,
+                    title: "Accessibility"
+                });
+                this.map.setCenter(this.options.center);
+            }     
+
+            if (settings.locations instanceof Array) {
+                this.plotArray(settings.locations);
+            }
+
+            if (settings.kml) {
+                var mainLayer = new google.maps.KmlLayer(settings.kml);
+                mainLayer.setMap(this.map);
+            }
+            
+            if (settings.layers) {
+                var layers = [];
+                while (settings.layers.length > 0){
+                    var m = new google.maps.KmlLayer(settings.layers.pop());
+                    layers.push(m);
+                    m.setMap(this.map);
+                }
+            }
+        },
+        mappingInitialize: function () {
+            this.options = {
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: new google.maps.LatLng(0, 0)
+            };
+
+            this.map = new google.maps.Map(document.getElementById("jekyll-mapping"), this.options);
+
+            if (settings.pages) {
+                this.indexMap();
+            } else {
+                this.pageToMap();
+            }
+        },
+        loadScript: function (set) {
+            settings = set;
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "http://maps.googleapis.com/maps/api/js?key=" + settings.api_key + "&sensor=false&callback=jekyllMapping.mappingInitialize";
+            document.body.appendChild(script);
+        }
+    };
+    return obj;
+}());
+</script> 
+        
+    
+
+  <link rel="stylesheet" href="/public/css/jekyll-glossary_tooltip.css">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/CIA_FBI_Debates/">CIA & FBI Debates</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Legal_Justifications/">Legal Justifications</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/SSCI/">Senate Select Committee on Intelligence</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Black_Site_Locations_and_Detainee_List/">Black Site Locations & Detainee List</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Glossary/">Glossary</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item active" href="https://ciatorturejustifications.github.io/Accessibility/">Accessibility</a>
+        
+      
+    
+
+    <span class="sidebar-nav-item">Current Version: v2.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2025 University of Leicester All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">CIA Torture Justifications</a>
+            <small>Post 9/11</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="page">
+  <h1 class="page-title">Accessibility</h1>
+  <p>The website contains the following accessibility features:</p>
+
+<ul>
+  <li>Alt text for images to describe the content of the image.</li>
+  <li>Responsive design to ensure that the website is accessible on a variety of devices.</li>
+  <li>Major links use <code class="language-plaintext highlighter-rouge">target="_blank"</code> to open in a new tab.</li>
+  <li>Opening navigation window scrolls to the top of the page to reset screen reader focus.</li>
+  <li>Dynamically changing tab title to indicate content summary or homepage.</li>
+  <li>Tooltips over defined words for glossary terms.</li>
+  <li>Table of full glossary terms and definitions.</li>
+  <li>Waypoint markers on the map to indicate locations on the map.</li>
+  <li>Timeline posts 3d pop-up effect to indicate the post is interactive.</li>
+  <li>Home page link at top of every page to allow users to easily navigate back to the homepage.</li>
+  <li>Supports SSL/TLS for website access over the HTTPS protocol (for secure browsing).</li>
+</ul>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/public/js/script.js'></script>
+  </body>
+</html>

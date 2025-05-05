@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Black Site Locations & Detainee List &middot; CIA Torture Justifications
+    
+  </title>
+
+  
+  <link rel="canonical" href="https://ciatorturejustifications.github.io/Black_Site_Locations_and_Detainee_List/">
+  
+
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/poole.css">
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/syntax.css">
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ciatorturejustifications.github.io/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="https://ciatorturejustifications.github.io/public/favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ciatorturejustifications.github.io/atom.xml">
+  
+    
+            <script type="text/javascript">
+var jekyllMapping = (function () {
+    'use strict';
+    var settings;
+    var obj = {
+        plotArray: function(locations) {
+            function jekyllMapListen (m, s) {
+                if (s.link) {
+                    google.maps.event.addListener(m, 'click', function() {
+                        window.location.href = s.link;
+                    });
+                }
+            }
+            var bounds = new google.maps.LatLngBounds(), markers = [], s, l, m;
+            while (locations.length > 0) {
+                s = locations.pop();
+                l = new google.maps.LatLng(s.latitude, s.longitude);
+                m = new google.maps.Marker({
+                    position: l,
+                    map: this.map,
+                    title: s.title,
+                    icon: s.icon ? `/public/images/${s.icon}pin.png` : '/public/images/redpin.png'
+                });
+                markers.push(m);
+                bounds.extend(l);                
+                jekyllMapListen(m, s);
+            }
+            this.map.fitBounds(bounds);
+        },
+        indexMap: function () {
+            this.plotArray(settings.pages);
+        },
+        pageToMap: function () {
+            if (typeof(settings.latitude) !== 'undefined' && typeof(settings.longitude) !== 'undefined') {
+                this.options.center = new google.maps.LatLng(settings.latitude, settings.longitude);
+
+                var mainMarker = new google.maps.Marker({
+                    position: this.options.center,
+                    map: this.map,
+                    title: "Black Site Locations & Detainee List"
+                });
+                this.map.setCenter(this.options.center);
+            }     
+
+            if (settings.locations instanceof Array) {
+                this.plotArray(settings.locations);
+            }
+
+            if (settings.kml) {
+                var mainLayer = new google.maps.KmlLayer(settings.kml);
+                mainLayer.setMap(this.map);
+            }
+            
+            if (settings.layers) {
+                var layers = [];
+                while (settings.layers.length > 0){
+                    var m = new google.maps.KmlLayer(settings.layers.pop());
+                    layers.push(m);
+                    m.setMap(this.map);
+                }
+            }
+        },
+        mappingInitialize: function () {
+            this.options = {
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: new google.maps.LatLng(0, 0)
+            };
+
+            this.map = new google.maps.Map(document.getElementById("jekyll-mapping"), this.options);
+
+            if (settings.pages) {
+                this.indexMap();
+            } else {
+                this.pageToMap();
+            }
+        },
+        loadScript: function (set) {
+            settings = set;
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "http://maps.googleapis.com/maps/api/js?key=" + settings.api_key + "&sensor=false&callback=jekyllMapping.mappingInitialize";
+            document.body.appendChild(script);
+        }
+    };
+    return obj;
+}());
+</script> 
+        
+    
+    
+            <script type="text/javascript">
+                window.onload = function () { jekyllMapping.loadScript({"provider":"google_js","api_key":"AIzaSyC9kFQuiK2r8-90rcTK8BQtCmG3_bhLpj8","locations":[{"title":"Thailand","latitude":15.870032,"longitude":100.992538,"icon":"green"},{"title":"Afghanistan","latitude":33.7680065,"longitude":66.2385139,"icon":"cobalt"},{"title":"Poland","latitude":52.215933,"longitude":19.134422,"icon":"blue"},{"title":"Afghanistan","latitude":30.47979719893695,"longitude":63.47790036131232,"icon":"gray"},{"title":"Romania","latitude":45.9852129,"longitude":24.6859225,"icon":"black"},{"title":"Guantanamo Bay","latitude":19.9032659,"longitude":-75.096312,"icon":"indigo"},{"title":"Guantanamo Bay","latitude":19.997728715423534,"longitude":-76.97025919311368,"icon":"maroon"},{"title":"Afghanistan","latitude":34.94064331729966,"longitude":67.26018711116456,"icon":"orange"}]}) };
+            </script>
+        
+    
+
+  <link rel="stylesheet" href="/public/css/jekyll-glossary_tooltip.css">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/CIA_FBI_Debates/">CIA & FBI Debates</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Legal_Justifications/">Legal Justifications</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/SSCI/">Senate Select Committee on Intelligence</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item active" href="https://ciatorturejustifications.github.io/Black_Site_Locations_and_Detainee_List/">Black Site Locations & Detainee List</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Glossary/">Glossary</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Accessibility/">Accessibility</a>
+        
+      
+    
+
+    <span class="sidebar-nav-item">Current Version: v2.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2025 University of Leicester All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">CIA Torture Justifications</a>
+            <small>Post 9/11</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="page">
+  <h1 class="page-title">Black Site Locations & Detainee List</h1>
+  
+
+<div id="jekyll-mapping" style="height:400px;width:600px;"></div>
+<p><sub>(Please note exact black site locations are classified, the map indicates the countries where sites were located but not exact location).</sub></p>
+
+<p>A <a href="https://en.wikipedia.org/wiki/CIA_black_sites">black site</a> is a location that is off the records that a detainee is taken to to be imprisoned and subjected to <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> , in other words, be torture. This is because at these sites no laws techically apply. Only a select amount of people knew the existance and locations of these sites.</p>
+
+<p>All black sites were given a code name relating to a colour, for  example, Thailand’s site was called ‘Detention Site Green’. The pin colours on the interactive map relates to the site code name colour. 
+The full list of sites names are:</p>
+<ol>
+  <li>‘Green’</li>
+  <li>‘Cobalt’</li>
+  <li>‘Blue’</li>
+  <li>‘Gray’</li>
+  <li>‘Black’</li>
+  <li>‘Indigo’</li>
+  <li>‘Maroon’</li>
+  <li>‘Orange’</li>
+</ol>
+
+<p>Detainee list:</p>
+
+
+    <table>
+      <thead>
+          <tr>
+              <th colspan="1" data-nth-cell="1" align="left">#</th>
+              <th colspan="1" data-nth-cell="2" align="left">CIA Detainees</th>
+              <th colspan="1" data-nth-cell="3" align="left">Date of Custody</th>
+              <th colspan="1" data-nth-cell="4" align="left">Days in CIA Custody</th>
+              <th colspan="1" data-nth-cell="5" align="left">Key</th>
+          </tr>
+        </thead>
+      <tbody>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="6" align="left">1</td>
+              <td colspan="1" rowspan="1" data-nth-cell="7" align="left"><strong>Abu Zubaydah</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="8" align="left">███████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="9" align="left">1,61█</td>
+              <td colspan="1" rowspan="4" data-nth-cell="10" align="left">Detainees in <strong>bold text</strong> were subject<br /> to the CIA’s enhanced interrogation techniques.</td>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="11" align="left">2</td>
+              <td colspan="1" rowspan="1" data-nth-cell="12" align="left">Zakariya</td>
+              <td colspan="1" rowspan="1" data-nth-cell="13" align="left">█████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="14" align="left">37█</td>
+                
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="15" align="left">3</td>
+              <td colspan="1" rowspan="1" data-nth-cell="16" align="left">Jamal Eldin Boudraa</td>
+              <td colspan="1" rowspan="1" data-nth-cell="17" align="left">█████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="18" align="left">63█</td>
+                
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="19" align="left">4</td>
+              <td colspan="1" rowspan="1" data-nth-cell="20" align="left">Abbar al-Hawari, aka Abu Sofiyan</td>
+              <td colspan="1" rowspan="1" data-nth-cell="21" align="left">█████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="22" align="left">37█</td>
+                
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="23" align="left">5</td>
+              <td colspan="1" rowspan="1" data-nth-cell="24" align="left">Hassan Muhammad Abu Bakr Qa’id</td>
+              <td colspan="1" rowspan="1" data-nth-cell="25" align="left">█████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="26" align="left">52█</td>
+              <td colspan="1" rowspan="1" data-nth-cell="27" align="left">Detainees in <em>italic text</em> have not previously been acknowledged by the CIA to the SSCI</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="28" align="left">6</td>
+              <td colspan="1" rowspan="1" data-nth-cell="29" align="left"><strong>Ridha Ahmed Najar, aka Najjar</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="30" align="left">█████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="31" align="left">70█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="32" align="left">7</td>
+              <td colspan="1" rowspan="1" data-nth-cell="33" align="left">Ayub Marshid Ali Salih</td>
+              <td colspan="1" rowspan="1" data-nth-cell="34" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="35" align="left">3█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="36" align="left">8</td>
+              <td colspan="1" rowspan="1" data-nth-cell="37" align="left">Bashir Nasir Ali al-Marwalah</td>
+              <td colspan="1" rowspan="1" data-nth-cell="38" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="39" align="left">3█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="40" align="left">9</td>
+              <td colspan="1" rowspan="1" data-nth-cell="41" align="left">Ha’il Aziz Ahmed al-Mithali</td>
+              <td colspan="1" rowspan="1" data-nth-cell="42" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="43" align="left">3█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="44" align="left">10</td>
+              <td colspan="1" rowspan="1" data-nth-cell="45" align="left">Hassan Bin Attash</td>
+              <td colspan="1" rowspan="1" data-nth-cell="46" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="47" align="left">12█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="48" align="left">11</td>
+              <td colspan="1" rowspan="1" data-nth-cell="49" align="left">Musab Umar Ali al-Mudwani</td>
+              <td colspan="1" rowspan="1" data-nth-cell="50" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="51" align="left">3█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="52" align="left">12</td>
+              <td colspan="1" rowspan="1" data-nth-cell="53" align="left">Said Saleh Said, aka Said Salih Said</td>
+              <td colspan="1" rowspan="1" data-nth-cell="54" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="55" align="left">3█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="56" align="left">13</td>
+              <td colspan="1" rowspan="1" data-nth-cell="57" align="left">Shawqi Awad</td>
+              <td colspan="1" rowspan="1" data-nth-cell="58" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="59" align="left">3█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="60" align="left">14</td>
+              <td colspan="1" rowspan="1" data-nth-cell="61" align="left">Umar Faruq, aka Abu al-Faruq al-Kuwaiti</td>
+              <td colspan="1" rowspan="1" data-nth-cell="62" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="63" align="left">41█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="64" align="left">15</td>
+              <td colspan="1" rowspan="1" data-nth-cell="65" align="left">Abd al-Salam al-Hilah</td>
+              <td colspan="1" rowspan="1" data-nth-cell="66" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="67" align="left">59█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="68" align="left">16</td>
+              <td colspan="1" rowspan="1" data-nth-cell="69" align="left"><em>Karim, aka Asat Sar Jan</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="70" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="71" align="left">6█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="72" align="left">17</td>
+              <td colspan="1" rowspan="1" data-nth-cell="73" align="left"><em>Akbar Zakaria, aka Zakaria Zeineddin</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="74" align="left">██████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="75" align="left">5█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="76" align="left">18</td>
+              <td colspan="1" rowspan="1" data-nth-cell="77" align="left"><strong><em>Rafiq bin Bashir bin Halul al-Hami</em></strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="78" align="left">████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="79" align="left">5█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="80" align="left">19</td>
+              <td colspan="1" rowspan="1" data-nth-cell="81" align="left"><strong><em>Tawfiq Nasir Awad al Bihani</em></strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="82" align="left">████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="83" align="left">5█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="84" align="left">20</td>
+              <td colspan="1" rowspan="1" data-nth-cell="85" align="left"><strong>Lutfi al-Arabi al-Gharisi</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="86" align="left">████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="87" align="left">38█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="88" align="left">21</td>
+              <td colspan="1" rowspan="1" data-nth-cell="89" align="left"><strong><em>Dr. Hikmat Naft Shaukat</em></strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="90" align="left">████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="91" align="left">7█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="92" align="left">22</td>
+              <td colspan="1" rowspan="1" data-nth-cell="93" align="left"><em>Yaqub al-Baluchi aka Abu Talha</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="94" align="left">████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="95" align="left">8█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="96" align="left">23</td>
+              <td colspan="1" rowspan="1" data-nth-cell="97" align="left">Abd al-Rahim Ghulam Rabbani</td>
+              <td colspan="1" rowspan="1" data-nth-cell="98" align="left">████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="99" align="left">55█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="100" align="left">24</td>
+              <td colspan="1" rowspan="1" data-nth-cell="101" align="left"><strong>Gul Rahman</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="102" align="left">████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="103" align="left">1█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="104" align="left">25</td>
+              <td colspan="1" rowspan="1" data-nth-cell="105" align="left"><strong>Ghulam Rabbani aka Abu Badr</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="106" align="left">████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="107" align="left">55█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="108" align="left">26</td>
+              <td colspan="1" rowspan="1" data-nth-cell="109" align="left"><strong>Abd al-Rahim al-Nashiri</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="110" align="left">██████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="111" align="left">1,39█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="112" align="left">27</td>
+              <td colspan="1" rowspan="1" data-nth-cell="113" align="left"><em>Haji Ghalgi</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="114" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="115" align="left">19█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="116" align="left">28</td>
+              <td colspan="1" rowspan="1" data-nth-cell="117" align="left"><em>Nazar Ali</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="118" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="119" align="left">3█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="120" align="left">29</td>
+              <td colspan="1" rowspan="1" data-nth-cell="121" align="left"><em>Juma Gul</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="122" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="123" align="left">9█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="124" align="left">30</td>
+              <td colspan="1" rowspan="1" data-nth-cell="125" align="left"><em>Wafti bin Ali aka Abdullah</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="126" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="127" align="left">8█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="128" align="left">31</td>
+              <td colspan="1" rowspan="1" data-nth-cell="129" align="left"><em>Adel</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="130" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="131" align="left">6█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="132" align="left">32</td>
+              <td colspan="1" rowspan="1" data-nth-cell="133" align="left"><em>Qari Mohib Ur Rehman</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="134" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="135" align="left">6█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="136" align="left">33</td>
+              <td colspan="1" rowspan="1" data-nth-cell="137" align="left"><em>Shah Wali Khan</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="138" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="139" align="left">2█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="140" align="left">34</td>
+              <td colspan="1" rowspan="1" data-nth-cell="141" align="left"><em>Hayatulah Haqqani</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="142" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="143" align="left">8█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="144" align="left">35</td>
+              <td colspan="1" rowspan="1" data-nth-cell="145" align="left">Bisher al-Rawi</td>
+              <td colspan="1" rowspan="1" data-nth-cell="146" align="left">████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="147" align="left">█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="148" align="left">36</td>
+              <td colspan="1" rowspan="1" data-nth-cell="149" align="left">Jamil el-Banna, aka Abu Anas</td>
+              <td colspan="1" rowspan="1" data-nth-cell="150" align="left">████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="151" align="left">█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="152" align="left">37</td>
+              <td colspan="1" rowspan="1" data-nth-cell="153" align="left"><strong>Ghairat Bahir</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="154" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="155" align="left">51█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="156" align="left">38</td>
+              <td colspan="1" rowspan="1" data-nth-cell="157" align="left">Pacha Wazir</td>
+              <td colspan="1" rowspan="1" data-nth-cell="158" align="left">█████████2002</td>
+              <td colspan="1" rowspan="1" data-nth-cell="159" align="left">33█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="160" align="left">39</td>
+              <td colspan="1" rowspan="1" data-nth-cell="161" align="left">Muhammad Amein al-Bakri</td>
+              <td colspan="1" rowspan="1" data-nth-cell="162" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="163" align="left">49█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="164" align="left">40</td>
+              <td colspan="1" rowspan="1" data-nth-cell="165" align="left">Abdullah Midhat Mursi</td>
+              <td colspan="1" rowspan="1" data-nth-cell="166" align="left">████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="167" align="left">11█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="168" align="left">41</td>
+              <td colspan="1" rowspan="1" data-nth-cell="169" align="left"><strong>Ramzi bin al-Shibh</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="170" align="left">████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="171" align="left">130█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="172" align="left">42</td>
+              <td colspan="1" rowspan="1" data-nth-cell="173" align="left">Ibn Shaykh al-Libi</td>
+              <td colspan="1" rowspan="1" data-nth-cell="174" align="left">████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="175" align="left">116█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="176" align="left">43</td>
+              <td colspan="1" rowspan="1" data-nth-cell="177" align="left"><strong>Muhammad Umar ‘Abd al-Rahman, aka Asadallah</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="178" align="left">█████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="179" align="left">15█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="180" align="left">44</td>
+              <td colspan="1" rowspan="1" data-nth-cell="181" align="left"><em>Abu Khalid</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="182" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="183" align="left">2█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="184" align="left">45</td>
+              <td colspan="1" rowspan="1" data-nth-cell="185" align="left"><strong>Khalid Shaykh Mohammad</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="186" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="187" align="left">128█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="188" align="left">46</td>
+              <td colspan="1" rowspan="1" data-nth-cell="189" align="left"><strong>Mustafa Ahmad al-Hawsawi</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="190" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="191" align="left">128█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="192" align="left">47</td>
+              <td colspan="1" rowspan="1" data-nth-cell="193" align="left"><strong>Abu Yasir al-Jaza `iri</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="194" align="left">███████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="195" align="left">126█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="196" align="left">48</td>
+              <td colspan="1" rowspan="1" data-nth-cell="197" align="left"><strong>Suleiman Abdullah</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="198" align="left">███████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="199" align="left">43█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="200" align="left">49</td>
+              <td colspan="1" rowspan="1" data-nth-cell="201" align="left">Hamid Aich</td>
+              <td colspan="1" rowspan="1" data-nth-cell="202" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="203" align="left">4█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="204" align="left">50</td>
+              <td colspan="1" rowspan="1" data-nth-cell="205" align="left">Sayed Habib</td>
+              <td colspan="1" rowspan="1" data-nth-cell="206" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="207" align="left">50█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="208" align="left">51</td>
+              <td colspan="1" rowspan="1" data-nth-cell="209" align="left"><strong>Abu Hazim, aka Abu Hazim al-Libi</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="210" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="211" align="left">73█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="212" align="left">52</td>
+              <td colspan="1" rowspan="1" data-nth-cell="213" align="left"><strong>Al-Shara’iya, aka Abd al-Karim</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="214" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="215" align="left">49█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="216" align="left">53</td>
+              <td colspan="1" rowspan="1" data-nth-cell="217" align="left">Muhammad Khan (son of Suhbat)</td>
+              <td colspan="1" rowspan="1" data-nth-cell="218" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="219" align="left">39█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="220" align="left">54</td>
+              <td colspan="1" rowspan="1" data-nth-cell="221" align="left"><em>Ibrahim Haqqani</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="222" align="left">█████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="223" align="left">2█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="224" align="left">55</td>
+              <td colspan="1" rowspan="1" data-nth-cell="225" align="left"><strong>Ammar al-Balluchi</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="226" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="227" align="left">120█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="228" align="left">56</td>
+              <td colspan="1" rowspan="1" data-nth-cell="229" align="left"><strong>Khallad bin Attash</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="230" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="231" align="left">120█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="232" align="left">57</td>
+              <td colspan="1" rowspan="1" data-nth-cell="233" align="left"><strong>Laid Ben Dohman Saidi, aka Abu Hudhaifa</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="234" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="235" align="left">46█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="236" align="left">58</td>
+              <td colspan="1" rowspan="1" data-nth-cell="237" align="left"><strong>Majid Khan</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="238" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="239" align="left">120█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="240" align="left">59</td>
+              <td colspan="1" rowspan="1" data-nth-cell="241" align="left">Mohammad Dinshah</td>
+              <td colspan="1" rowspan="1" data-nth-cell="242" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="243" align="left">26█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="244" align="left">60</td>
+              <td colspan="1" rowspan="1" data-nth-cell="245" align="left">Muhammad Jafar Jamal al-Qahtani</td>
+              <td colspan="1" rowspan="1" data-nth-cell="246" align="left">█████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="247" align="left">34█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="248" align="left">61</td>
+              <td colspan="1" rowspan="1" data-nth-cell="249" align="left">Abu Nasim al-Tunisi</td>
+              <td colspan="1" rowspan="1" data-nth-cell="250" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="251" align="left">33█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="252" align="left">62</td>
+              <td colspan="1" rowspan="1" data-nth-cell="253" align="left"><strong>Mohd Farik bin Amin, aka Abu Zubair</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="254" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="255" align="left">117█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="256" align="left">63</td>
+              <td colspan="1" rowspan="1" data-nth-cell="257" align="left">Zarmein</td>
+              <td colspan="1" rowspan="1" data-nth-cell="258" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="259" align="left">20█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="260" align="left">64</td>
+              <td colspan="1" rowspan="1" data-nth-cell="261" align="left">Hiwa Abdul Rahman Rashul</td>
+              <td colspan="1" rowspan="1" data-nth-cell="262" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="263" align="left">11█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="264" align="left">65</td>
+              <td colspan="1" rowspan="1" data-nth-cell="265" align="left">Adel Abu Redwan Ben Hamlili</td>
+              <td colspan="1" rowspan="1" data-nth-cell="266" align="left">█████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="267" align="left">30█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="268" align="left">66</td>
+              <td colspan="1" rowspan="1" data-nth-cell="269" align="left">Shaistah Habibullah Khan</td>
+              <td colspan="1" rowspan="1" data-nth-cell="270" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="271" align="left">22█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="272" align="left">67</td>
+              <td colspan="1" rowspan="1" data-nth-cell="273" align="left"><strong>Samr Hilmi Abdul Latif al-Barq</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="274" align="left">██████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="275" align="left">8█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="276" align="left">68</td>
+              <td colspan="1" rowspan="1" data-nth-cell="277" align="left">Ali Jan</td>
+              <td colspan="1" rowspan="1" data-nth-cell="278" align="left">███████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="279" align="left">28█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="280" align="left">69</td>
+              <td colspan="1" rowspan="1" data-nth-cell="281" align="left">Muhammad Khan (son of Amir)</td>
+              <td colspan="1" rowspan="1" data-nth-cell="282" align="left">████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="283" align="left">20█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="284" align="left">70</td>
+              <td colspan="1" rowspan="1" data-nth-cell="285" align="left">Modin Nik Muhammad</td>
+              <td colspan="1" rowspan="1" data-nth-cell="286" align="left">███████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="287" align="left">12█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="288" align="left">71</td>
+              <td colspan="1" rowspan="1" data-nth-cell="289" align="left">Abdullah Ashami</td>
+              <td colspan="1" rowspan="1" data-nth-cell="290" align="left">███████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="291" align="left">27█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="292" align="left">72</td>
+              <td colspan="1" rowspan="1" data-nth-cell="293" align="left"><strong>Bashir bin Lap, aka Lillie</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="294" align="left">███████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="295" align="left">111█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="296" align="left">73</td>
+              <td colspan="1" rowspan="1" data-nth-cell="297" align="left"><strong>Riduan bin Isomuddin, aka Hambali</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="298" align="left">████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="299" align="left">111█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="300" align="left">74</td>
+              <td colspan="1" rowspan="1" data-nth-cell="301" align="left">Sanad `Ali Yislam al-Kazimi</td>
+              <td colspan="1" rowspan="1" data-nth-cell="302" align="left">████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="303" align="left">27█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="304" align="left">75</td>
+              <td colspan="1" rowspan="1" data-nth-cell="305" align="left">Salah Nasir Salim Ali, aka Muhsin</td>
+              <td colspan="1" rowspan="1" data-nth-cell="306" align="left">██████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="307" align="left">60█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="308" align="left">76</td>
+              <td colspan="1" rowspan="1" data-nth-cell="309" align="left">Abd Qudra Aliah Maia Azrat al-Hadi</td>
+              <td colspan="1" rowspan="1" data-nth-cell="310" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="311" align="left">9█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="312" align="left">77</td>
+              <td colspan="1" rowspan="1" data-nth-cell="313" align="left">Bismullah</td>
+              <td colspan="1" rowspan="1" data-nth-cell="314" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="315" align="left">█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="316" align="left">78</td>
+              <td colspan="1" rowspan="1" data-nth-cell="317" align="left">Sa’id Allam</td>
+              <td colspan="1" rowspan="1" data-nth-cell="318" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="319" align="left">9█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="320" align="left">79</td>
+              <td colspan="1" rowspan="1" data-nth-cell="321" align="left">Sa’ida Gul</td>
+              <td colspan="1" rowspan="1" data-nth-cell="322" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="323" align="left">9█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="324" align="left">80</td>
+              <td colspan="1" rowspan="1" data-nth-cell="325" align="left">Shah Khan Wali</td>
+              <td colspan="1" rowspan="1" data-nth-cell="326" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="327" align="left">9█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="328" align="left">81</td>
+              <td colspan="1" rowspan="1" data-nth-cell="329" align="left">Yahya, aka Rugollah</td>
+              <td colspan="1" rowspan="1" data-nth-cell="330" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="331" align="left">9█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="332" align="left">82</td>
+              <td colspan="1" rowspan="1" data-nth-cell="333" align="left">Zakariya ‘abd al-Rauf</td>
+              <td colspan="1" rowspan="1" data-nth-cell="334" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="335" align="left">9█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="336" align="left">83</td>
+              <td colspan="1" rowspan="1" data-nth-cell="337" align="left">Zamarai Nur Muhammad Juma Khan</td>
+              <td colspan="1" rowspan="1" data-nth-cell="338" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="339" align="left">9█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="340" align="left">84</td>
+              <td colspan="1" rowspan="1" data-nth-cell="341" align="left"><em>Abdullah Salim al-Qahtani</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="342" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="343" align="left">2█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="344" align="left">85</td>
+              <td colspan="1" rowspan="1" data-nth-cell="345" align="left"><em>Awwad Sabhan al-Shammari</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="346" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="347" align="left">2█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="348" align="left">86</td>
+              <td colspan="1" rowspan="1" data-nth-cell="349" align="left">Noor Jalal</td>
+              <td colspan="1" rowspan="1" data-nth-cell="350" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="351" align="left">23█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="352" align="left">87</td>
+              <td colspan="1" rowspan="1" data-nth-cell="353" align="left"><strong>Majid Bin Muhammad Bin Sulayman Khayil, aka Arsala Khan</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="354" align="left">█████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="355" align="left">5█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="356" align="left">88</td>
+              <td colspan="1" rowspan="1" data-nth-cell="357" align="left"><em>Aso Hawleri</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="358" align="left">██████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="359" align="left">1█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="360" align="left">89</td>
+              <td colspan="1" rowspan="1" data-nth-cell="361" align="left">Mohd al-Shomaila</td>
+              <td colspan="1" rowspan="1" data-nth-cell="362" align="left">██████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="363" align="left">55█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="364" align="left">90</td>
+              <td colspan="1" rowspan="1" data-nth-cell="365" align="left">Ali Saeed Awadh</td>
+              <td colspan="1" rowspan="1" data-nth-cell="366" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="367" align="left">17█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="368" align="left">91</td>
+              <td colspan="1" rowspan="1" data-nth-cell="369" align="left"><strong>Adnan al-Libi</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="370" align="left">███████████2003</td>
+              <td colspan="1" rowspan="1" data-nth-cell="371" align="left">24█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="372" align="left">92</td>
+              <td colspan="1" rowspan="1" data-nth-cell="373" align="left">Muhammad Abdullah Saleh</td>
+              <td colspan="1" rowspan="1" data-nth-cell="374" align="left">███████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="375" align="left">48█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="376" align="left">93</td>
+              <td colspan="1" rowspan="1" data-nth-cell="377" align="left">Riyadh the Facilitator</td>
+              <td colspan="1" rowspan="1" data-nth-cell="378" align="left">████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="379" align="left">12█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="380" align="left">94</td>
+              <td colspan="1" rowspan="1" data-nth-cell="381" align="left">Abu Abdallah al-Zulaytini</td>
+              <td colspan="1" rowspan="1" data-nth-cell="382" align="left">████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="383" align="left">21█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="384" align="left">95</td>
+              <td colspan="1" rowspan="1" data-nth-cell="385" align="left">Binyam Ahmed Mohammed</td>
+              <td colspan="1" rowspan="1" data-nth-cell="386" align="left">████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="387" align="left">11█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="388" align="left">96</td>
+              <td colspan="1" rowspan="1" data-nth-cell="389" align="left">Firas al-Yemeni</td>
+              <td colspan="1" rowspan="1" data-nth-cell="390" align="left">████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="391" align="left">95█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="392" align="left">97</td>
+              <td colspan="1" rowspan="1" data-nth-cell="393" align="left">Khalid ‘Abd al-Razzaq al-Masri</td>
+              <td colspan="1" rowspan="1" data-nth-cell="394" align="left">████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="395" align="left">12█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="396" align="left">98</td>
+              <td colspan="1" rowspan="1" data-nth-cell="397" align="left"><strong>Hassan Ghul</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="398" align="left">████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="399" align="left">94█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="400" align="left">99</td>
+              <td colspan="1" rowspan="1" data-nth-cell="401" align="left"><strong>Muhammad Qurban Sayyid Ibrahim</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="402" align="left">████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="403" align="left">26█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="404" align="left">100</td>
+              <td colspan="1" rowspan="1" data-nth-cell="405" align="left">Saud Memon</td>
+              <td colspan="1" rowspan="1" data-nth-cell="406" align="left">█████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="407" align="left">74█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="408" align="left">101</td>
+              <td colspan="1" rowspan="1" data-nth-cell="409" align="left"><em>Gul Rahman (2)</em></td>
+              <td colspan="1" rowspan="1" data-nth-cell="410" align="left">███████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="411" align="left">3█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="412" align="left">102</td>
+              <td colspan="1" rowspan="1" data-nth-cell="413" align="left">Hassan Ahmed Guleed</td>
+              <td colspan="1" rowspan="1" data-nth-cell="414" align="left">████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="415" align="left">90█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="416" align="left">103</td>
+              <td colspan="1" rowspan="1" data-nth-cell="417" align="left">Abu ‘Abdallah</td>
+              <td colspan="1" rowspan="1" data-nth-cell="418" align="left">████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="419" align="left">87█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="420" align="left">104</td>
+              <td colspan="1" rowspan="1" data-nth-cell="421" align="left"><strong>ABU BAHAR AL-TURKI</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="422" align="left">[REDACTED]2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="423" align="left">Approximately 24█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="424" align="left">105</td>
+              <td colspan="1" rowspan="1" data-nth-cell="425" align="left"><strong>ABU TALHA AL-MAGREBI</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="426" align="left">[REDACTED]2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="427" align="left">Approximately 24█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="428" align="left">106</td>
+              <td colspan="1" rowspan="1" data-nth-cell="429" align="left">Abd al-Bari al-Filistini</td>
+              <td colspan="1" rowspan="1" data-nth-cell="430" align="left">███████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="431" align="left">77█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="432" align="left">107</td>
+              <td colspan="1" rowspan="1" data-nth-cell="433" align="left">Ayyub al-Libi</td>
+              <td colspan="1" rowspan="1" data-nth-cell="434" align="left">███████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="435" align="left">30█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="436" align="left">108</td>
+              <td colspan="1" rowspan="1" data-nth-cell="437" align="left">Marwan al-Jabbur</td>
+              <td colspan="1" rowspan="1" data-nth-cell="438" align="left">███████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="439" align="left">77█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="440" align="left">109</td>
+              <td colspan="1" rowspan="1" data-nth-cell="441" align="left">Qattal al-Uzbeki</td>
+              <td colspan="1" rowspan="1" data-nth-cell="442" align="left">██████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="443" align="left">80█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="444" align="left">110</td>
+              <td colspan="1" rowspan="1" data-nth-cell="445" align="left"><strong>Janat Gul</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="446" align="left">██████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="447" align="left">75█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="448" align="left">111</td>
+              <td colspan="1" rowspan="1" data-nth-cell="449" align="left"><strong>Ahmed Khalfan Ghailani</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="450" align="left">█████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="451" align="left">73█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="452" align="left">112</td>
+              <td colspan="1" rowspan="1" data-nth-cell="453" align="left"><strong>Sharif al-Masri</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="454" align="left">███████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="455" align="left">8█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="456" align="left">113</td>
+              <td colspan="1" rowspan="1" data-nth-cell="457" align="left">Abdi Rashid Samatar</td>
+              <td colspan="1" rowspan="1" data-nth-cell="458" align="left">██████████2004</td>
+              <td colspan="1" rowspan="1" data-nth-cell="459" align="left">65█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="460" align="left">114</td>
+              <td colspan="1" rowspan="1" data-nth-cell="461" align="left"><strong>Abu Faraj al-Libi</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="462" align="left">██████2005</td>
+              <td colspan="1" rowspan="1" data-nth-cell="463" align="left">46█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="464" align="left">115</td>
+              <td colspan="1" rowspan="1" data-nth-cell="465" align="left">Abu Munthir al-Magrebi</td>
+              <td colspan="1" rowspan="1" data-nth-cell="466" align="left">███████2005</td>
+              <td colspan="1" rowspan="1" data-nth-cell="467" align="left">46█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="468" align="left">116</td>
+              <td colspan="1" rowspan="1" data-nth-cell="469" align="left">Ibrahim Jan</td>
+              <td colspan="1" rowspan="1" data-nth-cell="470" align="left">████████████</td>
+              <td colspan="1" rowspan="1" data-nth-cell="471" align="left">31█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="472" align="left">117</td>
+              <td colspan="1" rowspan="1" data-nth-cell="473" align="left"><strong>Abu Ja`far al-Iraqi</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="474" align="left">█████████2005</td>
+              <td colspan="1" rowspan="1" data-nth-cell="475" align="left">28█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="476" align="left">118</td>
+              <td colspan="1" rowspan="1" data-nth-cell="477" align="left">Abd al-Hadi al-Iraqi</td>
+              <td colspan="1" rowspan="1" data-nth-cell="478" align="left">████████2006</td>
+              <td colspan="1" rowspan="1" data-nth-cell="479" align="left">17█</td>
+          </tr>
+        <tr>
+          </tr>
+        <tr>
+              <td colspan="1" rowspan="1" data-nth-cell="480" align="left">119</td>
+              <td colspan="1" rowspan="1" data-nth-cell="481" align="left"><strong>Muhammad Rahim</strong></td>
+              <td colspan="1" rowspan="1" data-nth-cell="482" align="left">█████2007</td>
+              <td colspan="1" rowspan="1" data-nth-cell="483" align="left">24█</td>
+          </tr>
+        <tr>
+          </tr>
+        </tbody>
+    </table>
+<blockquote>
+  <p><a href="https://web.archive.org/web/20150530141239/https://www.feinstein.senate.gov/public/index.cfm/files/serve/?File_id=5871bb22-f4fb-4ec4-b419-99babb2eca3d"><strong>Source</strong></a>: CIA Fax to SSCI Committee Staff, entitled, “15 June Request for Excel Spreasheet, “June 17, 2009 (DTS #2009-2529; CIA detainee charts provided to the Committee on April 27, 2007; document in Committee records entitled, “Briefing Charts provided to committee Members from CIA Director Michael Hayden at the closed Hearing on April 12, 2007, concerning EIT’s used with CIA detainees, and a list of techniques” (DTS2007-1594, hearing transcript at DTS# 2007-3158); and CIA operational cables and other records produced for the Committee’s Study of the CIA’s Detention and Interrogation Program.</p>
+
+  <p>** Gul Raham, listed as detainee 24, was the subject of a notification to the Senate Select Committee on Intelligence following his death at DETENTION SITE COBALT; however, he has not appeared on lists of CIA detainees provided to Committee.</p>
+</blockquote></code></pre>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/public/js/script.js'></script>
+  </body>
+</html>

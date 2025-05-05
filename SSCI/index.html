@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Senate Select Committee on Intelligence &middot; CIA Torture Justifications
+    
+  </title>
+
+  
+  <link rel="canonical" href="https://ciatorturejustifications.github.io/SSCI/">
+  
+
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/poole.css">
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/syntax.css">
+  <link rel="stylesheet" href="https://ciatorturejustifications.github.io/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ciatorturejustifications.github.io/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="https://ciatorturejustifications.github.io/public/favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ciatorturejustifications.github.io/atom.xml">
+  
+    
+            <script type="text/javascript">
+var jekyllMapping = (function () {
+    'use strict';
+    var settings;
+    var obj = {
+        plotArray: function(locations) {
+            function jekyllMapListen (m, s) {
+                if (s.link) {
+                    google.maps.event.addListener(m, 'click', function() {
+                        window.location.href = s.link;
+                    });
+                }
+            }
+            var bounds = new google.maps.LatLngBounds(), markers = [], s, l, m;
+            while (locations.length > 0) {
+                s = locations.pop();
+                l = new google.maps.LatLng(s.latitude, s.longitude);
+                m = new google.maps.Marker({
+                    position: l,
+                    map: this.map,
+                    title: s.title,
+                    icon: s.icon ? `/public/images/${s.icon}pin.png` : '/public/images/redpin.png'
+                });
+                markers.push(m);
+                bounds.extend(l);                
+                jekyllMapListen(m, s);
+            }
+            this.map.fitBounds(bounds);
+        },
+        indexMap: function () {
+            this.plotArray(settings.pages);
+        },
+        pageToMap: function () {
+            if (typeof(settings.latitude) !== 'undefined' && typeof(settings.longitude) !== 'undefined') {
+                this.options.center = new google.maps.LatLng(settings.latitude, settings.longitude);
+
+                var mainMarker = new google.maps.Marker({
+                    position: this.options.center,
+                    map: this.map,
+                    title: "Senate Select Committee on Intelligence"
+                });
+                this.map.setCenter(this.options.center);
+            }     
+
+            if (settings.locations instanceof Array) {
+                this.plotArray(settings.locations);
+            }
+
+            if (settings.kml) {
+                var mainLayer = new google.maps.KmlLayer(settings.kml);
+                mainLayer.setMap(this.map);
+            }
+            
+            if (settings.layers) {
+                var layers = [];
+                while (settings.layers.length > 0){
+                    var m = new google.maps.KmlLayer(settings.layers.pop());
+                    layers.push(m);
+                    m.setMap(this.map);
+                }
+            }
+        },
+        mappingInitialize: function () {
+            this.options = {
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: new google.maps.LatLng(0, 0)
+            };
+
+            this.map = new google.maps.Map(document.getElementById("jekyll-mapping"), this.options);
+
+            if (settings.pages) {
+                this.indexMap();
+            } else {
+                this.pageToMap();
+            }
+        },
+        loadScript: function (set) {
+            settings = set;
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "http://maps.googleapis.com/maps/api/js?key=" + settings.api_key + "&sensor=false&callback=jekyllMapping.mappingInitialize";
+            document.body.appendChild(script);
+        }
+    };
+    return obj;
+}());
+</script> 
+        
+    
+
+  <link rel="stylesheet" href="/public/css/jekyll-glossary_tooltip.css">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/CIA_FBI_Debates/">CIA & FBI Debates</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Legal_Justifications/">Legal Justifications</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item active" href="https://ciatorturejustifications.github.io/SSCI/">Senate Select Committee on Intelligence</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Black_Site_Locations_and_Detainee_List/">Black Site Locations & Detainee List</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Glossary/">Glossary</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://ciatorturejustifications.github.io/Accessibility/">Accessibility</a>
+        
+      
+    
+
+    <span class="sidebar-nav-item">Current Version: v2.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2025 University of Leicester All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">CIA Torture Justifications</a>
+            <small>Post 9/11</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="page">
+  <h1 class="page-title">Senate Select Committee on Intelligence</h1>
+  <p><strong>Justifications outlined by the SSCI Study</strong></p>
+
+<p>The <span class="jekyll-glossary">   SSCI   <span class="jekyll-glossary-tooltip">Senate Select Committee on Intelligence<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Senate_Select_Committee_on_Intelligence" target="_blank"></a></span></span> <a href="https://www.intelligence.senate.gov/sites/default/files/publications/CRPT-113srpt288.pdf">Study</a>, published in 2014 was a culmination of ten years of research into the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span>’s Detetion and Interrogation Program where <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> were employed. The Study was commissioned by the SSCI, which was headed by <a href="https://en.wikipedia.org/wiki/Dianne_Feinstein">Dianne Feinstein</a> at the time (pictured below). The research for the Study was conducted by the SSCI itself and led by <a href="https://en.wikipedia.org/wiki/Daniel_J._Jones">Daniel J. Jones</a>.</p>
+
+<figure><img alt="Dianne Feinstein" src="/public/images/800px-Dianne_Feinstein,_official_Senate_photo_2.jpg" style="margin-left: auto; margin-right: auto; align: center;" width="320px" /><figcaption><a href="https://en.wikipedia.org/wiki/Dianne_Feinstein#/media/File:Dianne_Feinstein,_official_Senate_photo_2.jpg">Source</a></figcaption></figure>
+
+<p>The Study stated that one of the main justifications was that the intelligence services were dedicated more resources to do anything to destroy global terror networks. This would include through the gathering of intelligence of through the interrogation of detainees. It further states how the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> were heavily reliant on the legal justifications gain through the ‘torture memos’ throughout the whole time they were using <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span>. <span class="jekyll-glossary">   CTC   <span class="jekyll-glossary-tooltip">Counterterrorism Center<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Counterterrorism_Center" target="_blank"></a></span></span> Director, <a href="https://en.wikipedia.org/wiki/Cofer_Black">Cofer Black</a> infers that this is a war and this means there are exceptional circumstances:</p>
+
+<figure><img alt="Cofer Black" src="/public/images/Cofer-Black-Quote2.png" style="margin-left: auto; margin-right: auto; align: center;" width="1024px" /><figcaption><a href="https://en.wikipedia.org/wiki/Cofer_Black#/media/File:Black_jcofer_sct.jpg">Original image</a></figcaption></figure>
+
+<p>The Study found that the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> found as many loopholes as possible in attempt to gain as many justifications as possible. This was so their position on <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> were as strong as possible. As part of these justifications, the Study details how the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> repeatedly misled the <span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span>. One of the most significant instances was misleading the <span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span> on <a href="https://en.wikipedia.org/wiki/Abu_Zubaydah">Abu Zubaydah</a>’s position in al-Qaeda, when they knew it was false - this was instrumental in getting the techniques approved. Even when the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> deviated from what they had informed the <span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span> of, they then further misled the DoJ in their additional justifications. For example, the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> did not stick to the <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> parameters of what the <span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span> set, however, the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span>’s additional justification was that this was neccessary to save lives. The <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> consistantly, bent the rules of interrogation and what was legal to justify their own actions. The <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> also did not seek reassessment when they deviated from the <span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span>’s regulations.</p>
+
+<p>The Study further outlines the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span>’s false claims of <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> effectiveness. Effectiveness was measured based on metrics designed by the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> to make their techniques seem more successful in gaining actionable intelligence. The flawed metrics meant that the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> could further justify the use of EITs as they appeared more effective. The metrics were as follows:</p>
+
+<ol>
+  <li>Increased understanding of terrorist networks</li>
+  <li>Identification of terrorists and those providing material support</li>
+  <li>Terrorist captures</li>
+  <li>Terrorist interrogations</li>
+  <li>Disruption of terrorist operations and financing</li>
+  <li>Disruption of terrorist recruitment</li>
+  <li>Reduction in terrorist safe-havens</li>
+  <li>Development of counterterrorism assets</li>
+  <li>Intelligence gathering of documents, computer equipment, communications and devices, etc.</li>
+  <li>Improved information sharing</li>
+  <li>Improved foreign liaison cooperation against terrorism</li>
+</ol>
+
+<p>The <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> stated that the intelligence gathered from subjecting Abu Zubaydah to <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> met these metrics. This was because the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> accredited information on <a href="https://en.wikipedia.org/wiki/Khalid_Sheikh_Mohammed">Khalid Sheikh Mohammed</a> and other terrorist plots to <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> which matched these metrics of success. However, this information was actually obtained through traditional rapport bulding interrogation methods. As the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> accredited the thwarting of terror plots to <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> it added further justification and support to <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> - it was almost a way of making it appear as if the ends justified the means. Clearly, this was just what the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> wanted to make it seem like. The Study states that the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> purposely ommitted information to the <span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span> and Government to gain justifications  for their actions. The <span class="jekyll-glossary">   SSCI   <span class="jekyll-glossary-tooltip">Senate Select Committee on Intelligence<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Senate_Select_Committee_on_Intelligence" target="_blank"></a></span></span> note further misconduct by the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> as in 2005 <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> Officer, Jose Rodriguez ordered the destruction of videotapes that documented various interrogations, including Abu Zubaydah’s interrogation in particular, which depicted adverse affects he experienced to <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span>. When the tapes were requested the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> initially lied about their existance. The destruction took place as it would have raised concerns about EITs efficacy and legitimacy and reduced the strength of <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> justifications. The Study also detailed how no actionable intelligence was obtained through the use of <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> very early on, yet the CIA still decided to use them anyway.</p>
+
+<p>The Study further noted how all information about <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> that was given to external agencies was only checked by the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> and not verified by any other agency meaning that bodies such as the <span class="jekyll-glossary">   DoJ   <span class="jekyll-glossary-tooltip">Department of Justice<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/United_States_Department_of_Justice" target="_blank"></a></span></span> could only make assumptions based on what the <span class="jekyll-glossary">   CIA   <span class="jekyll-glossary-tooltip">Central Intelligence Agency<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Central_Intelligence_Agency" target="_blank"></a></span></span> claimed. The Study state the CIA were able to do this as they gain vast amounts of unchecked power as during the War on Terror there was a despiration within the intelligence services, the Bush Administration and the nation to bring those responsible for 9/11 to justice and prevent any further plots. These factors were immediately recognised by President Barack Obama in 2009, admitting “we tortured some folks” (as seen in the video below):</p>
+
+<iframe style="display: block; margin-left: auto; margin-right: auto; align: center;" width="560" height="315" src="https://www.youtube.com/embed/5YBinnWqABQ?si=1bLMyZw48DC0gCsi&amp;start=125" title="YouTube video player" frameborder="0" allow="encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+<p>On Obama’s second day in office he signed multiple <a href="https://en.wikipedia.org/wiki/Executive_Order_13492">Executive Orders</a> relating to <span class="jekyll-glossary">   EITs   <span class="jekyll-glossary-tooltip">Enhanced Interrogation Techniques<br /><a class="jekyll-glossary-source-link" href="https://en.wikipedia.org/wiki/Enhanced_interrogation_techniques" target="_blank"></a></span></span> and ultimately closing down the program. Despite this Obama failed to shut down Guantanemo Bay Detention Camp where some of these detainees including Abu Zubaydah and Khalid Sheikh Mohemmed still remain as of 2025.</p>
+
+<hr />
+
+<p><strong>Wider Reading</strong></p>
+
+<p><a href="https://www.theguardian.com/us-news/2014/dec/09/cia-torture-report-released">Spencer Ackerman, Dominic Rushe, Julian Borger, <em>Senate report on CIA torture claims spy agency lied about ‘ineffective’ program,</em> 2014 [accessed May 5th 2025].</a></p>
+
+<p><a href="https://www.bbc.co.uk/news/world-us-canada-30406735">BBC News, <em>CIA interrogation report: An expert guide,</em> 2014 [accessed May 5th 2025].</a></p>
+
+<p><a href="https://www.presidency.ucsb.edu/documents/executive-order-13491-ensuring-lawful-interrogations">The American Presidency Project, Executive Order 13491 - Ensuring Lawful Interrogations, 2009 [accessed May 5th 2025].</a></p>
+
+<p><a href="https://www.presidency.ucsb.edu/documents/executive-order-13492-review-and-disposition-individuals-detained-the-guantanamo-bay-naval">The American Presidency Project, <em>Executive Order 13492 - Review and Disposition of Individuals Detained at the Guantánamo Bay Naval Base and Closure of Detention Facilities</em>, 2009 [accessed May 5th 2025].</a></p>
+
+<p><a href="https://www.imdb.com/title/tt8236336/"><em>The Report</em> [film], dir. Scott Z. Burns, (Amazon Studios, 2019), [accessed May 5th 2025].</a></p>
+
+<hr />
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/public/js/script.js'></script>
+  </body>
+</html>
